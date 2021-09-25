@@ -6,6 +6,7 @@ enum ComponentColor {
     DANGER = 'bg-danger',
     SUCCESS = 'bg-success',
     WARNING = 'bg-warning',
+    TRANSPARENT = ''
 }
 
 export default ComponentColor;

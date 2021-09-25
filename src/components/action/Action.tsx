@@ -1,12 +1,12 @@
 import { FunctionComponent } from "react";
 import ComponentColor from "style/tailwind/ComponentColor";
-import { AnchorProps } from "./anchor/Anchor";
+import Anchor, { AnchorProps } from "./anchor/Anchor";
 import Button, { ButtonProps } from "./button/Button";
-import Route, { RouteProps } from "./route/Route";
+import Link, { LinkProps } from "./route/Route";
 
 const EXTERNAL_PATH = "http";
 
-export interface ActionProps extends AnchorProps, RouteProps, ButtonProps {
+export interface ActionProps extends AnchorProps, LinkProps, ButtonProps {
   color?: ComponentColor;
 }
 
@@ -17,9 +17,9 @@ const Action: FunctionComponent<ActionProps> = (props: ActionProps) => {
       {!props.path ? (
         <Button {...props} className={className} />
       ) : props.path.startsWith(EXTERNAL_PATH) ? (
-        <Action {...props} className={className} />
+        <Anchor {...props} className={className} />
       ) : (
-        <Route {...props} className={className} />
+        <Link {...props} className={className} />
       )}
     </>
   );

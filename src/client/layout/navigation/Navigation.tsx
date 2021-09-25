@@ -1,22 +1,22 @@
-import Action, { ActionProps } from "components/action/Action";
 import { FunctionComponent } from "react";
+import NavigationActions, {
+  NavigationActionsProps,
+} from "./actions/NavigationActions";
+import NavigationHeader, {
+  NavigationHeaderProps,
+} from "./header/NavigationHeader";
 
-export interface NavigationProps {
-  header?: string;
-  actions?: ActionProps[];
-}
+export interface NavigationProps
+  extends NavigationHeaderProps,
+  NavigationActionsProps { }
 
 const Navigation: FunctionComponent<NavigationProps> = (
   props: NavigationProps
 ) => {
   return (
-    <nav>
-      <header>{props.header}</header>
-      <div>
-        {props.actions?.map((action) => (
-          <Action {...action} />
-        ))}
-      </div>
+    <nav className={`flex bg-primary justify-between items-center w-screen py-2 px-4`}>
+      <NavigationHeader {...props} />
+      <NavigationActions {...props} />
     </nav>
   );
 };

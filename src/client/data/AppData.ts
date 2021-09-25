@@ -11,7 +11,12 @@ const AppData: AppDataType = {
     actions: [
       {
         label: "Home",
-        color: ComponentColor.DANGER
+      },
+      {
+        label: "About",
+      },
+      {
+        label: "Login",
       },
     ],
   },

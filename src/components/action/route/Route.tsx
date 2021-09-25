@@ -1,15 +1,15 @@
 import { FunctionComponent } from "react";
-import { Route as ReactRoute } from "react-router-dom";
+import { Link as ReactLink } from "react-router-dom";
 
-export interface RouteProps {
+export interface LinkProps {
   path?: string;
   label?: string;
   className?: string;
   exact?: boolean;
 }
 
-const Route: FunctionComponent<RouteProps> = (props: RouteProps) => {
-  return <ReactRoute exact={props.exact} path={props.path}></ReactRoute>;
+const Link: FunctionComponent<LinkProps> = (props: LinkProps) => {
+  return <ReactLink to={props.path ?? ''}>{props.label}</ReactLink>;
 };
 
-export default Route;
+export default Link;
