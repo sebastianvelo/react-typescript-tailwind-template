@@ -1,5 +1,4 @@
 import { NavigationProps } from "client/layout/navigation/Navigation";
-import ComponentColor from "style/tailwind/ComponentColor";
 
 type AppDataType = {
   navigation: NavigationProps;

@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react";
+import ComponentStyle from "style/ComponentStyle";
 
 export interface NavigationHeaderProps {
   header?: string;
@@ -7,7 +8,7 @@ export interface NavigationHeaderProps {
 const NavigationHeader: FunctionComponent<NavigationHeaderProps> = (
   props: NavigationHeaderProps
 ) => {
-  return <header className={`text-2xl`}>{props.header}</header>;
+  return <header className={ComponentStyle.NAVIGATION_HEADER}>{props.header}</header>;
 };
 
 export default NavigationHeader;

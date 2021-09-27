@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef, useState } from "react";
-import Theme from "../../style/tailwind/Theme";
-import LocalStorageKey from "../util/LocalStorageKey";
+import Theme from "style/tailwind/constants/Theme";
+import LocalStorageKey from "../util/constants/LocalStorageKey";
 
 const toggleDark = (isDark: boolean) => {
   document.documentElement.classList.toggle(Theme.DARK);

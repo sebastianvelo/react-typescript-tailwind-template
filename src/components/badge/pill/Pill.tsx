@@ -1,14 +1,14 @@
 import { FunctionComponent } from "react";
+import ComponentClass from "style/ComponentClass";
 
-const PILL_CLASS_NAME = `rounded-md bg-primary w-20 h-6 px-2`;
-
-interface PillProps {
+export interface PillProps {
     label?: string;
+    className?: string;
 }
 
 const Pill: FunctionComponent<PillProps> = (props: PillProps) => {
     return (
-        <div className={PILL_CLASS_NAME}>
+        <div className={ComponentClass.PILL(props)}>
             {props.label}
         </div>
     );
