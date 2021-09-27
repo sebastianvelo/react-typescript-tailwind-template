@@ -5,13 +5,14 @@ import Button, { ButtonProps } from "./button/Button";
 import Link, { LinkProps } from "./route/Route";
 
 const EXTERNAL_PATH = "http";
+const ACTION_CLASS_NAME = `px-4 py-2 rounded-md`;
 
 export interface ActionProps extends AnchorProps, LinkProps, ButtonProps {
   color?: ComponentColor;
 }
 
 const Action: FunctionComponent<ActionProps> = (props: ActionProps) => {
-  const className = `${props.color ?? ''} ${props.className ?? ''} px-4 py-2 rounded-md`.trim();
+  const className = `${props.color ?? ''} ${props.className ?? ''} ${ACTION_CLASS_NAME}`.trim();
   return (
     <>
       {!props.path ? (

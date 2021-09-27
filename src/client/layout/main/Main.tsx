@@ -1,3 +1,4 @@
+import Pill from "components/badge/pill/Pill";
 import { FunctionComponent, useEffect } from "react";
 import { Switch, useHistory } from "react-router-dom";
 
@@ -17,8 +18,9 @@ const Main: FunctionComponent<MainProps> = () => {
 
     return (
         <main>
+            <Pill label="NUEVO" />
             <Switch>
-                
+
             </Switch>
         </main>
     );
