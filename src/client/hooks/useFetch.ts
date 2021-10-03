@@ -13,7 +13,7 @@ export const useFetch = <T extends Object>(req: AxiosRequestConfig) => {
       .catch(function (error) {
         console.error(error);
       });
-  }, []);
+  }, [req]);
 
   return data;
 };
