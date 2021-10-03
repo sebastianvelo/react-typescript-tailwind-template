@@ -1,4 +1,5 @@
-import Pill from "components/badge/pill/Pill";
+import Dropdown from "components/dropdown/Dropdown";
+import Pill from "components/pill/Pill";
 import Table from "components/table/Table";
 import { FunctionComponent, useEffect } from "react";
 import { Switch, useHistory } from "react-router-dom";
@@ -24,8 +25,10 @@ const Main: FunctionComponent<MainProps> = () => {
 
     return (
         <main>
-            <Pill label="NUEVO" />
-            <Table {...tablemock} />
+            <Dropdown
+                trigger={<Pill label="NUEVO" />}
+                content={<Table {...tablemock} />}
+            />
             <Switch>
 
             </Switch>

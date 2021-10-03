@@ -1,5 +1,5 @@
 import { ActionProps } from "components/action/Action";
-import { PillProps } from "components/badge/pill/Pill";
+import { PillProps } from "components/pill/Pill";
 import ComponentStyle from "./ComponentStyle";
 import TailwindClass from "./tailwind/TailwindClass";
 

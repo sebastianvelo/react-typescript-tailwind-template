@@ -6,6 +6,7 @@ enum ComponentStyle {
     ACTION = `px-4 py-2 rounded-md`,
     
     PILL = `py-2 px-4 shadow-md rounded-full font-semibold text-sm mr-2 w-max`,
+    DROPDOWN = `list-none`
 }
 
 export default ComponentStyle;
