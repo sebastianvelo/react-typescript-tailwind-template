@@ -12,6 +12,12 @@ const ComponentClass = {
       .add(props.color)
       .add(props.className)
       .build(),
+  INPUT: () =>
+    TailwindClass.builder()
+      .add(ComponentStyle.INPUT)
+      .add(ComponentStyle.INPUT_FOCUS)
+      .add(ComponentStyle.INPUT_HOVER)
+      .build(),
   PILL: (props: PillProps) =>
     TailwindClass.builder()
       .add(ComponentStyle.PILL)
@@ -24,8 +30,8 @@ const ComponentClass = {
       .build(),
   TAB_CONTENT: (props: TabContentProps) =>
     TailwindClass.builder()
-    .addIf(ComponentStyle.TAB_CONTENT_HIDDEN, !props.active)
-    .build(),
+      .addIf(ComponentStyle.TAB_CONTENT_HIDDEN, !props.active)
+      .build(),
 };
 
 export default ComponentClass;

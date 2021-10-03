@@ -1,4 +1,5 @@
 import Dropdown from "components/dropdown/Dropdown";
+import Input from "components/form/input/Input";
 import Loading from "components/loading/Loading";
 import Pill from "components/pill/Pill";
 import Table from "components/table/Table";
@@ -44,6 +45,8 @@ const Main: FunctionComponent<MainProps> = () => {
                 />
             </Loading>
             <Tabs tabs={tabsMock} content={tabsContentMock}></Tabs>
+
+            <Input placeholder={'QUE ONDAAA'} />
             <Switch>
 
             </Switch>
