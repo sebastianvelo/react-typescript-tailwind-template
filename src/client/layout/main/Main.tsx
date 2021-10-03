@@ -1,4 +1,5 @@
 import Dropdown from "components/dropdown/Dropdown";
+import Loading from "components/loading/Loading";
 import Pill from "components/pill/Pill";
 import Table from "components/table/Table";
 import { FunctionComponent, useEffect } from "react";
@@ -25,10 +26,12 @@ const Main: FunctionComponent<MainProps> = () => {
 
     return (
         <main>
-            <Dropdown
-                trigger={<Pill label="NUEVO" />}
-                content={<Table {...tablemock} />}
-            />
+            <Loading loading={false}>
+                <Dropdown
+                    trigger={<Pill label="NUEVO" />}
+                    content={<Table {...tablemock} />}
+                />
+            </Loading>
             <Switch>
 
             </Switch>
