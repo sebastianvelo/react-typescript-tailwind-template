@@ -8,6 +8,11 @@ enum ComponentStyle {
     NAVIGATION = `flex bg-primary justify-between items-center w-screen py-2 px-4`,
     NAVIGATION_HEADER = `text-2xl`,
     NAVIGATION_ACTIONS = ``,
+    TABS = "flex",
+    TAB = "px-6",
+    TAB_ACTIVE = "border-b-2 border-primary",
+    TAB_CONTENT_HIDDEN = "hidden",
+    TAB_CONTENT_WRAPPER = "py-4"
 }
 
 export default ComponentStyle;

@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef } from "react";
 import Theme from "style/tailwind/constants/Theme";
 import LocalStorageKey from "../util/constants/LocalStorageKey";
 
@@ -12,7 +12,7 @@ const toggleDark = (isDark: boolean) => {
 const useToggleDark = () => {
   const firstUpdate = useRef(true);
   const isDark: boolean =
-    localStorage.getItem(LocalStorageKey.THEME) != Theme.DARK;
+    localStorage.getItem(LocalStorageKey.THEME) !== Theme.DARK;
 
   useLayoutEffect(() => {
     if (firstUpdate.current) {

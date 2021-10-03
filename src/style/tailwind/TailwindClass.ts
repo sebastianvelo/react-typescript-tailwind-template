@@ -5,8 +5,13 @@ class TailwindClass {
     return new TailwindClass();
   }
 
-  add(className?: string, condition: boolean = true): TailwindClass {
-    condition && this.classNames.push(className ?? ``);
+  add(className?: string): TailwindClass {
+    this.classNames.push(className ?? ``);
+    return this;
+  }
+
+  addIf(className?: string, condition?: boolean): TailwindClass {
+    condition && this.add(className);
     return this;
   }
 
