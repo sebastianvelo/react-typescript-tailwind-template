@@ -1,10 +1,11 @@
 import Button from "components/action/button/Button";
 import { FunctionComponent, useState } from "react";
+import ComponentClass from "style/ComponentClass";
 import ComponentStyle from "style/ComponentStyle";
 import TabContent from "./tab-content/TabContent";
 import Tab from "./tab/Tab";
 
-interface TabsProps {
+export interface TabsProps {
     tabs: {
         label: string;
         content: React.ReactNode | React.ReactNode[];
@@ -16,7 +17,7 @@ const Tabs: FunctionComponent<TabsProps> = (props: TabsProps) => {
     const [tabActive, setTabActive] = useState<number>(0);
 
     return (
-        <div className={props.className}>
+        <div className={ComponentClass.TABS_WRAPPER(props)}>
             <div className={ComponentStyle.TABS}>
                 {props.tabs.map((tab, i) => (
                     <Button onClick={() => setTabActive(i)}>

@@ -1,3 +1,4 @@
+import useToggleDark from "client/hooks/useToggleDark";
 import Action from "components/action/Action";
 import Dropdown from "components/dropdown/Dropdown";
 import Input from "components/form/input/Input";
@@ -50,6 +51,7 @@ const Main: FunctionComponent<MainProps> = () => {
 
     return (
         <main>
+            <Action label="Toggle" color={ComponentColor.PRIMARY} onClick={useToggleDark}/>
             <Tabs tabs={tabsMock}></Tabs>
 
             <Loading loading={false}>
