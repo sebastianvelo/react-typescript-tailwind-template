@@ -21,6 +21,7 @@ const ComponentClass = {
   PILL: (props: PillProps) =>
     TailwindClass.builder()
       .add(ComponentStyle.PILL)
+      .add(props.color)
       .add(props.className)
       .build(),
   TAB: (props: TabProps) =>

@@ -5,8 +5,10 @@ import TabContent from "./tab-content/TabContent";
 import Tab from "./tab/Tab";
 
 interface TabsProps {
-    tabs: string[];
-    content: React.ReactNode[];
+    tabs: {
+        label: string;
+        content: React.ReactNode | React.ReactNode[];
+    }[];
     className?: string;
 }
 
@@ -18,14 +20,14 @@ const Tabs: FunctionComponent<TabsProps> = (props: TabsProps) => {
             <div className={ComponentStyle.TABS}>
                 {props.tabs.map((tab, i) => (
                     <Button onClick={() => setTabActive(i)}>
-                        <Tab label={tab} key={i} active={tabActive === i} />
+                        <Tab label={tab.label} key={i} active={tabActive === i} />
                     </Button>
                 ))}
             </div>
             <div className={ComponentStyle.TAB_CONTENT_WRAPPER}>
-                {props.content.map((content, i) =>
+                {props.tabs.map((tab, i) =>
                     <TabContent key={i} active={tabActive === i}>
-                        {content}
+                        {tab.content}
                     </TabContent>
                 )}
             </div>
