@@ -1,5 +1,3 @@
-import ActorRequest from "api/imdb/actor/ActorRequest"
-import { SearchByName } from "api/imdb/actor/ActorResponse.types"
 import ErrorPage, { ErrorPageProps } from "client/pages/error/ErrorPage"
 import HomePage, { HomePageProps } from "client/pages/home/HomePage"
 import PageRoute from "client/routes/PageRoute"
@@ -9,17 +7,6 @@ const HomeData: Page<HomePageProps> = {
     route: PageRoute.HOME,
     component: HomePage,
     props: {
-        fetchTransformer: {
-            request: ActorRequest.searchByName('Smith'),
-            transformer: (i: SearchByName) => i.map(actor => ({
-                title: actor.name,
-                subtitle: actor.imdb_id,
-                image: {
-                    src: 'https://picsum.photos/200/500',
-                    alt: actor.name,
-                }
-            }))
-        }
     }
 }
 
