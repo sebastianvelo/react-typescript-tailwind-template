@@ -3,6 +3,7 @@ import { HomePageBlueprint } from "./home/HomePageBlueprint"
 
 const Pages = [
     HomePageBlueprint, 
+
     ErrorPageBlueprint,];
 
 export default Pages;

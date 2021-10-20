@@ -10,7 +10,6 @@ export interface AppProps {
  }
 
 const App: FunctionComponent<AppProps> = (props: AppProps) => {
-
   return (
     <div className={`font-sans`}>
       <Navigation {...props.navigation()} />

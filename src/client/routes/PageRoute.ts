@@ -1,8 +1,8 @@
 enum PageRoute {
   HOME = "/home",
   LOGIN = "/login",
-  ACCOUNT = "/account",
   ERROR = "/*",
+  ACCOUNT = "/account",
 }
 
 export default PageRoute;

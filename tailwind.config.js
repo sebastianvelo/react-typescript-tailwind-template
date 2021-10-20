@@ -8,24 +8,25 @@ module.exports = {
       transitionProperty: {
         'width': 'width',
         'borderWidth': 'borderWidth',
+        'letterSpacing': 'letterSpacing',
       },
       colors: {
         primary: {
-          light: colors.yellow[200],
-          DEFAULT: colors.yellow[500],
-          dark: colors.yellow[600],
+          light: '#fff9cc',
+          DEFAULT: '#FFF275',
+          dark: '#ffe41a',
         },
         secondary: {
-          light: colors.indigo[200],
-          DEFAULT: colors.indigo[500],
-          dark: colors.indigo[600],
+          light: "#2EAADC",
+          DEFAULT: "#186A8B",
+          dark: "#030D11",
         },
         success: {
           DEFAULT: colors.green[500],
           dark: colors.green[600],
         },
         danger: {
-          DEFAULT: colors.red[600],
+          DEFAULT: colors.red[500],
           dark: colors.red[700],
         },
         warning: {
@@ -52,6 +53,7 @@ module.exports = {
       width: ['hover', 'focus'],
       ringWidth: ['hover'],
       ringColor: ['hover'],
+      letterSpacing: ['hover', 'focus'],
     },
   },
   plugins: [],

@@ -1,24 +1,30 @@
-import ComponentColor from "client/common/tailwind/constants/ComponentColor";
+import ComponentHovereableColor from "client/common/tailwind/constants/ComponentHovereableColor";
 import { NavigationProps } from "client/layout/navigation/Navigation";
 import PageRoute from "client/routes/PageRoute";
 
 const navigationBlueprint = (): NavigationProps => ({
-  header: "Header",
+  header: "Template",
   menu: {
     options: [
       {
         path: PageRoute.HOME,
         label: "Profile",
-        color: ComponentColor.PRIMARY
+        color: ComponentHovereableColor.PRIMARY
       },
       {
         path: PageRoute.ACCOUNT,
         label: "Account",
-        color: ComponentColor.PRIMARY
+        color: ComponentHovereableColor.PRIMARY
       },
       {
+        path: PageRoute.HOME,
+        label: "Settings",
+        color: ComponentHovereableColor.PRIMARY
+      },
+      {
+        path: PageRoute.HOME,
         label: "Logout",
-        color: ComponentColor.DANGER
+        color: ComponentHovereableColor.DANGER
       },
     ],
     toggler: {
