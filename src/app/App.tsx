@@ -1,11 +1,11 @@
 import { FunctionComponent } from "react";
-import Test from "./Test";
+import Demo from "../demo/Demo";
 
 interface AppProps {}
 
 const App: FunctionComponent<AppProps> = () => (
   <div>
-    <Test />
+    <Demo />
   </div>
 );
 
