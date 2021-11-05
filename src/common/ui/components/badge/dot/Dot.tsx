@@ -1,27 +1,18 @@
 import TailwindStyle from "common/tailwind/TailwindStyle";
-import Color from "common/ui/types/color/Color";
+import ColorProps from "common/ui/common/props/ColorProps";
+import { bgColorStyle } from "common/ui/style/CommonStyles";
 import { FunctionComponent } from "react";
 
-const getClassName = (props: DotProps) => TailwindStyle.builder()
+const getClassName = (props: DotProps) =>
+  TailwindStyle.builder()
     .add(`h-3 w-3 rounded-full`)
-    .addIf(`bg-primary`, !props.color || props.color === 'primary')
-    .addIf(`bg-secondary`, props.color === 'secondary')
-    .addIf(`bg-warning`, props.color === 'warning')
-    .addIf(`bg-danger`, props.color === 'danger')
-    .addIf(`bg-success`, props.color === 'success')
-    .addIf(`bg-info`, props.color === 'info')
-    .addIf(`bg-dark`, props.color === 'dark')
-    .addIf(`bg-light`, props.color === 'light')
+    .add(bgColorStyle(props))
     .get();
 
-interface DotProps {
-    color?: Color;
-}
+interface DotProps extends ColorProps {}
 
-const Dot: FunctionComponent<DotProps> = (props: DotProps) => {
-    return (
-        <div className={getClassName(props)}></div>
-    );
-}
+const Dot: FunctionComponent<DotProps> = (props: DotProps) => (
+  <div className={getClassName(props)}></div>
+);
 
 export default Dot;

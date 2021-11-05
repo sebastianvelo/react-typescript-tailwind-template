@@ -1,3 +1,3 @@
-type FeedbackType = 'success' | 'info' | 'warning' | 'danger';
+type FeedbackType = "success" | "info" | "warning" | "danger";
 
 export default FeedbackType;
