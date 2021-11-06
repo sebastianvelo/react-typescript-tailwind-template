@@ -5,7 +5,7 @@ import { FunctionComponent } from "react";
 import Article, { ArticleProps } from "../article/Article";
 
 const getClassName = (props: SectionProps) =>
-  TailwindStyle.builder().add(props.className).add(`px-4 py-2 space-y-2`).get();
+  TailwindStyle.builder().add(props.className).add(`space-y-2`).get();
 
 interface SectionProps extends StyleableProps {
   articles?: ArticleProps[];
@@ -15,9 +15,11 @@ interface SectionProps extends StyleableProps {
 const Section: FunctionComponent<SectionProps> = (props: SectionProps) => (
   <section className={getClassName(props)}>
     <Title {...props.title} />
-    {props.articles?.map((article) => (
-      <Article {...article} />
-    ))}
+    <div className={`px-2 space-y-2`}>
+      {props.articles?.map((article) => (
+        <Article {...article} />
+      ))}
+    </div>
   </section>
 );
 

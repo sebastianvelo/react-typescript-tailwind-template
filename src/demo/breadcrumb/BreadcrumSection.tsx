@@ -3,9 +3,15 @@ import Row from "common/ui/widget/row/Row";
 import Section from "common/ui/widget/section/Section";
 import { FunctionComponent } from "react";
 
-const BreadcrumbSection: FunctionComponent = () => (      <Section
-    className={`divide-secondary w-full`}
-    title={{ size: "3xl", content: "Breadcrumb" }}
+const BreadcrumbSection: FunctionComponent = () => (
+  <Section
+    className={`w-full`}
+    title={{
+      content: "Breadcrumb",
+      size: "3xl",
+      className: "bg-dark p-2",
+      color: "primary"
+    }}
     articles={[
       {
         children: (
@@ -13,16 +19,16 @@ const BreadcrumbSection: FunctionComponent = () => (      <Section
             <Breadcrumb
               levels={[
                 {
-                  content: "level 1"
+                  content: "Level 1"
                 },
                 {
-                  content: "level 2"
+                  content: "Level 2"
                 },
                 {
-                  content: "level 3"
+                  content: "Level 3"
                 },
                 {
-                  content: "level 4"
+                  content: "Level 4"
                 }
               ]}
             />
@@ -30,6 +36,7 @@ const BreadcrumbSection: FunctionComponent = () => (      <Section
         )
       }
     ]}
-  />)
- 
+  />
+);
+
 export default BreadcrumbSection;

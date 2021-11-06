@@ -10,7 +10,7 @@ const getComponent = (props: ActionProps) => {
   return <ActionAnchor {...props} />;
 };
 
-interface ActionProps
+export interface ActionProps
   extends ActionLinkProps,
     ActionAnchorProps,
     ActionButtonProps {}

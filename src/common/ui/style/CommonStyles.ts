@@ -2,10 +2,15 @@ import TailwindStyle from "common/tailwind/TailwindStyle";
 import ColorProps from "../common/props/ColorProps";
 import SizeProps from "../common/props/SizeProps";
 
+export const transitionStyle = () =>
+  TailwindStyle.builder()
+    .add(`transition-all duration-300 ease-in-out`)
+    .get();
+
 export const hoverableStyle = () =>
   TailwindStyle.builder()
     .add(`cursor-pointer`)
-    .add(`transition duration-300 ease-in-out`)
+    .add(transitionStyle())
     .get();
 
 export const textColorStyle = (props: ColorProps) =>

@@ -9,10 +9,12 @@ const getClassName = (props: RowProps) =>
     .add(`flex`)
     .addIf(`flex-col md:flex-row`, props.responsive)
     .addIf(`flex-wrap`, !props.responsive)
+    .addIf(`flex-row-reverse`, props.reverse)
     .get();
 
 interface RowProps extends ParentProps, StyleableProps {
   responsive?: boolean;
+  reverse?: boolean;
 }
 
 const Row: FunctionComponent<RowProps> = (props: RowProps) => (
