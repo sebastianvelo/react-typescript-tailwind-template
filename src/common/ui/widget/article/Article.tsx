@@ -4,7 +4,7 @@ import StyleableProps from "common/ui/common/props/StyleableProps";
 import Title, { TitleProps } from "common/ui/components/title/Title";
 import { FunctionComponent } from "react";
 
-const getClassName = (props: ArticleProps) =>
+const articleStyle = (props: ArticleProps) =>
   TailwindStyle.builder().add(props.className).add(`py-2 space-y-2`).get();
 
 export interface ArticleProps extends ParentProps, StyleableProps {
@@ -12,7 +12,7 @@ export interface ArticleProps extends ParentProps, StyleableProps {
 }
 
 const Article: FunctionComponent<ArticleProps> = (props: ArticleProps) => (
-  <article className={getClassName(props)}>
+  <article className={articleStyle(props)}>
     <Title {...props.title} />
     {props.children}
   </article>

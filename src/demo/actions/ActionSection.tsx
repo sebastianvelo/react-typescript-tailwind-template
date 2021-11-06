@@ -1,55 +1,9 @@
 import Action from "common/ui/components/action/Action";
-import Color from "common/ui/types/color/Color";
 import ButtonDropdown from "common/ui/widget/button-dropdown/ButtonDropdown";
 import Row from "common/ui/widget/row/Row";
 import Section from "common/ui/widget/section/Section";
 import { FunctionComponent } from "react";
-
-const actions: { content: string; color: Color }[] = [
-  {
-    content: "Primary",
-    color: "primary"
-  },
-  {
-    content: "Secondary",
-    color: "secondary"
-  },
-  {
-    content: "Success",
-    color: "success"
-  },
-  {
-    content: "Danger",
-    color: "danger"
-  },
-  {
-    content: "Warning",
-    color: "warning"
-  },
-  {
-    content: "Info",
-    color: "info"
-  }
-];
-
-const dropdownActions = [
-  {
-    content: `Action 1`,
-    url: `#`
-  },
-  {
-    content: `Action 2`,
-    url: `#`
-  },
-  {
-    content: `Action 3`,
-    url: `#`
-  },
-  {
-    content: `Action 4`,
-    url: `#`
-  }
-];
+import { actions, dropdownActions } from "./mock/ActionMock";
 
 const ActionSection: FunctionComponent = () => (
   <Section

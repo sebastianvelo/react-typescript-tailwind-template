@@ -5,7 +5,7 @@ import TextContentProps from "common/ui/common/props/TextContentProps";
 import { textColorStyle, textSizeStyle } from "common/ui/style/CommonStyles";
 import { FunctionComponent } from "react";
 
-const getClassName = (props: TextProps) =>
+const textStyle = (props: TextProps) =>
   TailwindStyle.builder()
     .add(`text-justify`)
     .add(textSizeStyle(props))
@@ -15,7 +15,7 @@ const getClassName = (props: TextProps) =>
 export interface TextProps extends TextContentProps, ColorProps, SizeProps {}
 
 const Text: FunctionComponent<TextProps> = (props: TextProps) => (
-  <p className={getClassName(props)}>{props.content}</p>
+  <p className={textStyle(props)}>{props.content}</p>
 );
 
 export default Text;

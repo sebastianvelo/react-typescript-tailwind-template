@@ -9,7 +9,7 @@ import {
 } from "common/ui/style/CommonStyles";
 import { FunctionComponent } from "react";
 
-const getClassName = (props: ActionButtonProps) =>
+const buttonStyle = (props: ActionButtonProps) =>
   TailwindStyle.builder()
     .add(`rounded-md text-center px-4 py-2 font-bold`)
     .add(bgColorStyle(props))
@@ -28,7 +28,7 @@ export interface ActionButtonProps
 const ActionButton: FunctionComponent<ActionButtonProps> = (
   props: ActionButtonProps
 ) => (
-  <button className={getClassName(props)} onClick={props.onClick}>
+  <button className={buttonStyle(props)} onClick={props.onClick}>
     {props.children ?? props.content}
   </button>
 );

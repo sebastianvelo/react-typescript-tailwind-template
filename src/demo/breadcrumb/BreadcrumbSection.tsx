@@ -2,6 +2,7 @@ import Breadcrumb from "common/ui/widget/breadcrumb/Breadcrumb";
 import Row from "common/ui/widget/row/Row";
 import Section from "common/ui/widget/section/Section";
 import { FunctionComponent } from "react";
+import { breadcrumbProps } from "./mock/BreadcrumbMock";
 
 const BreadcrumbSection: FunctionComponent = () => (
   <Section
@@ -16,22 +17,7 @@ const BreadcrumbSection: FunctionComponent = () => (
       {
         children: (
           <Row className="md:space-x-2">
-            <Breadcrumb
-              levels={[
-                {
-                  content: "Level 1"
-                },
-                {
-                  content: "Level 2"
-                },
-                {
-                  content: "Level 3"
-                },
-                {
-                  content: "Level 4"
-                }
-              ]}
-            />
+            <Breadcrumb {...breadcrumbProps} />
           </Row>
         )
       }

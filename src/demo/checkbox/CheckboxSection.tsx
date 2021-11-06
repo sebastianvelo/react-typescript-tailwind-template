@@ -3,6 +3,7 @@ import CheckboxList from "common/ui/widget/checkbox-list/CheckboxList";
 import Row from "common/ui/widget/row/Row";
 import Section from "common/ui/widget/section/Section";
 import { FunctionComponent } from "react";
+import { checkboxListProps } from "./mock/CheckboxMock";
 
 const CheckboxSection: FunctionComponent = () => (
   <Section
@@ -28,28 +29,7 @@ const CheckboxSection: FunctionComponent = () => (
         title: { size: "2xl", content: "Checkbox list right" },
         children: (
           <Row className="md:space-x-2">
-            <CheckboxList
-              items={[
-                {
-                  children: "First checkbox",
-                  checkbox: {
-                    label: "first"
-                  }
-                },
-                {
-                  children: "Second checkbox",
-                  checkbox: {
-                    label: "second"
-                  }
-                },
-                {
-                  children: "Third checkbox",
-                  checkbox: {
-                    label: "thrid"
-                  }
-                }
-              ]}
-            />
+            <CheckboxList {...checkboxListProps} />
           </Row>
         )
       },
@@ -57,32 +37,10 @@ const CheckboxSection: FunctionComponent = () => (
         title: { size: "2xl", content: "Checkbox list left" },
         children: (
           <Row className="md:space-x-2">
-            <CheckboxList
-              left
-              items={[
-                {
-                  children: "First checkbox",
-                  checkbox: {
-                    label: "first"
-                  }
-                },
-                {
-                  children: "Second checkbox",
-                  checkbox: {
-                    label: "second"
-                  }
-                },
-                {
-                  children: "Third checkbox",
-                  checkbox: {
-                    label: "thrid"
-                  }
-                }
-              ]}
-            />
+            <CheckboxList left {...checkboxListProps} />
           </Row>
         )
-      },
+      }
     ]}
   />
 );

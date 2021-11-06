@@ -1,5 +1,7 @@
 import { FunctionComponent } from "react";
-import CheckboxListItem, { CheckboxListItemProps } from "./CheckboxListItem";
+import CheckboxListItem, {
+  CheckboxListItemProps
+} from "./item/CheckboxListItem";
 
 interface CheckboxListProps {
   items?: CheckboxListItemProps[];

@@ -1,21 +1,17 @@
 import TailwindStyle from "common/tailwind/TailwindStyle";
 import ColorProps from "../common/props/ColorProps";
+import RoundableProps from "../common/props/RoundeableProps";
 import SizeProps from "../common/props/SizeProps";
 
 export const transitionStyle = () =>
-  TailwindStyle.builder()
-    .add(`transition-all duration-300 ease-in-out`)
-    .get();
+  TailwindStyle.builder().add(`transition-all duration-200 ease-in-out`).get();
 
 export const hoverableStyle = () =>
-  TailwindStyle.builder()
-    .add(`cursor-pointer`)
-    .add(transitionStyle())
-    .get();
+  TailwindStyle.builder().add(`cursor-pointer`).add(transitionStyle()).get();
 
 export const textColorStyle = (props: ColorProps) =>
   TailwindStyle.builder()
-    .addIf(`text-dark`, !props.color || props.color === "dark")
+    .addIf(`text-dark`, props.color === "dark")
     .addIf(`text-secondary`, props.color === "secondary")
     .addIf(`text-warning`, props.color === "warning")
     .addIf(`text-danger`, props.color === "danger")
@@ -28,32 +24,33 @@ export const textColorStyle = (props: ColorProps) =>
 export const textColorHoverableStyle = (props: ColorProps) =>
   TailwindStyle.builder()
     .add(hoverableStyle())
-    .addIf(`hover:text-dark-light`, !props.color || props.color === "dark")
-    .addIf(`hover:text-secondary-dark`, props.color === "secondary")
-    .addIf(`hover:text-warning-dark`, props.color === "warning")
-    .addIf(`hover:text-danger-dark`, props.color === "danger")
-    .addIf(`hover:text-success-dark`, props.color === "success")
-    .addIf(`hover:text-primary-dark`, props.color === "primary")
-    .addIf(`hover:text-light-dark`, props.color === "light")
-    .addIf(`hover:text-info-dark`, props.color === "info")
+    .addIf(`hover:text-dark-light`, props.color === "dark")
+    .addIf(`dark:hover:text-secondary-light hover:text-secondary-dark`, props.color === "secondary")
+    .addIf(`dark:hover:text-warning-light dark`, props.color === "warning")
+    .addIf(`dark:hover:text-danger-light dark`, props.color === "danger")
+    .addIf(`dark:hover:text-success-light dark`, props.color === "success")
+    .addIf(`dark:hover:text-primary-light dark`, props.color === "primary")
+    .addIf(`dark:hover:text-light-light dark`, props.color === "light")
+    .addIf(`dark:hover:text-info-light dark`, props.color === "info")
     .get();
 
 export const bgColorStyle = (props: ColorProps) =>
   TailwindStyle.builder()
-    .addIf(`bg-primary text-white`, !props.color || props.color === "primary")
-    .addIf(`bg-secondary text-white`, props.color === "secondary")
-    .addIf(`bg-warning-light`, props.color === "warning")
-    .addIf(`bg-danger text-white`, props.color === "danger")
-    .addIf(`bg-success text-white`, props.color === "success")
-    .addIf(`bg-info text-white`, props.color === "info")
+    .addIf(`bg-primary text-light`, props.color === "primary")
+    .addIf(`bg-secondary text-light`, props.color === "secondary")
+    .addIf(`bg-warning-light text-dark`, props.color === "warning")
+    .addIf(`bg-danger text-light`, props.color === "danger")
+    .addIf(`bg-success-dark text-light`, props.color === "success")
+    .addIf(`bg-info text-light`, props.color === "info")
     .addIf(`bg-dark`, props.color === "dark")
     .addIf(`bg-light`, props.color === "light")
+    .addIf(`bg-light dark:bg-dark dark:text-light`, !props.color)
     .get();
 
 export const bgColorHoverableStyle = (props: ColorProps) =>
   TailwindStyle.builder()
     .add(hoverableStyle())
-    .addIf(`hover:bg-primary-dark `, !props.color || props.color === "primary")
+    .addIf(`hover:bg-primary-dark `, props.color === "primary")
     .addIf(`hover:bg-secondary-dark `, props.color === "secondary")
     .addIf(`hover:bg-warning`, props.color === "warning")
     .addIf(`hover:bg-danger-dark`, props.color === "danger")
@@ -61,6 +58,7 @@ export const bgColorHoverableStyle = (props: ColorProps) =>
     .addIf(`hover:bg-info-dark`, props.color === "info")
     .addIf(`hover:bg-dark-light`, props.color === "dark")
     .addIf(`hover:bg-light-dark`, props.color === "light")
+    .addIf(`hover:bg-light-dark dark:hover:bg-dark-light`, !props.color)
     .get();
 
 export const textSizeStyle = (props: SizeProps) =>
@@ -72,4 +70,16 @@ export const textSizeStyle = (props: SizeProps) =>
     .addIf(`text-xl`, props.size === "xl")
     .addIf(`text-2xl`, props.size === "2xl")
     .addIf(`text-3xl`, props.size === "3xl")
+    .get();
+
+export const roundedStyle = (props: RoundableProps) =>
+  TailwindStyle.builder()
+    .addIf(`rounded-md`, !props.radius || props.radius === "m")
+    .addIf(`rounded-xs`, props.radius === "xs")
+    .addIf(`rounded-sm`, props.radius === "s")
+    .addIf(`rounded-lg`, props.radius === "l")
+    .addIf(`rounded-xl`, props.radius === "xl")
+    .addIf(`rounded-2xl`, props.radius === "2xl")
+    .addIf(`rounded-3xl`, props.radius === "3xl")
+    .addIf(`rounded-full`, props.radius === "full")
     .get();

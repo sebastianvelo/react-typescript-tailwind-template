@@ -23,7 +23,7 @@ const getIcon = (props: NotificationProps) => {
   }
 };
 
-const getClassName = (props: NotificationProps) =>
+const notificationStyle = (props: NotificationProps) =>
   TailwindStyle.builder()
     .addIf(`text-md`, !props.size || props.size === "m")
     .addIf(`text-xs`, props.size === "xs")
@@ -43,7 +43,7 @@ interface NotificationProps {
 const Notification: FunctionComponent<NotificationProps> = (
   props: NotificationProps
 ) => (
-  <span className={getClassName(props)}>
+  <span className={notificationStyle(props)}>
     <FontAwesomeIcon icon={getIcon(props)} />
   </span>
 );

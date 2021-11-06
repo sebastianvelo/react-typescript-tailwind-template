@@ -1,9 +1,12 @@
 import TailwindStyle from "common/tailwind/TailwindStyle";
+import { transitionStyle } from "common/ui/style/CommonStyles";
 import React, { FunctionComponent } from "react";
 
 const getTabContentStyle = (i: number, active: number) =>
   TailwindStyle.builder()
-    .addIf(`hidden`, i !== active)
+    .add(transitionStyle())
+    .addIf(`opacity-0 hidden`, i !== active)
+    .addIf(`opacity-100`, i === active)
     .get();
 
 interface TabsContentProps {

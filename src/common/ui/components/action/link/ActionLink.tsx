@@ -9,7 +9,7 @@ import {
 import { FunctionComponent } from "react";
 import { Link } from "react-router-dom";
 
-const getClassName = (props: ActionLinkProps) =>
+const linkStyle = (props: ActionLinkProps) =>
   TailwindStyle.builder()
     .add(textColorStyle(props))
     .add(textColorHoverableStyle(props))
@@ -25,7 +25,7 @@ export interface ActionLinkProps
 const ActionLink: FunctionComponent<ActionLinkProps> = (
   props: ActionLinkProps
 ) => (
-  <Link to={props.route ?? ""} className={getClassName(props)}>
+  <Link to={props.route ?? ""} className={linkStyle(props)}>
     {props.content}
   </Link>
 );

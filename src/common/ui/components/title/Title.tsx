@@ -6,7 +6,7 @@ import TextContentProps from "common/ui/common/props/TextContentProps";
 import { textColorStyle, textSizeStyle } from "common/ui/style/CommonStyles";
 import { FunctionComponent } from "react";
 
-const getClassName = (props: TitleProps) =>
+const titleStyle = (props: TitleProps) =>
   TailwindStyle.builder()
     .add(`font-bold`)
     .add(props.className)
@@ -17,7 +17,7 @@ const getClassName = (props: TitleProps) =>
 export interface TitleProps extends TextContentProps, ColorProps, SizeProps, StyleableProps {}
 
 const Title: FunctionComponent<TitleProps> = (props: TitleProps) => (
-  <h1 className={getClassName(props)}>{props.content}</h1>
+  <h1 className={titleStyle(props)}>{props.content}</h1>
 );
 
 export default Title;

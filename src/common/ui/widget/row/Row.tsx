@@ -3,7 +3,7 @@ import ParentProps from "common/ui/common/props/ParentProps";
 import StyleableProps from "common/ui/common/props/StyleableProps";
 import { FunctionComponent } from "react";
 
-const getClassName = (props: RowProps) =>
+const rowStyle = (props: RowProps) =>
   TailwindStyle.builder()
     .add(props.className)
     .add(`flex`)
@@ -18,7 +18,7 @@ interface RowProps extends ParentProps, StyleableProps {
 }
 
 const Row: FunctionComponent<RowProps> = (props: RowProps) => (
-  <div className={getClassName(props)}>{props.children}</div>
+  <div className={rowStyle(props)}>{props.children}</div>
 );
 
 export default Row;

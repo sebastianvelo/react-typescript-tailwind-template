@@ -8,7 +8,7 @@ import {
 } from "common/ui/style/CommonStyles";
 import { FunctionComponent } from "react";
 
-const getClassName = (props: ActionAnchorProps) =>
+const anchorStyle = (props: ActionAnchorProps) =>
   TailwindStyle.builder()
     .add(textColorStyle(props))
     .add(textColorHoverableStyle(props))
@@ -24,7 +24,7 @@ export interface ActionAnchorProps
 const ActionAnchor: FunctionComponent<ActionAnchorProps> = (
   props: ActionAnchorProps
 ) => (
-  <a className={getClassName(props)} href={props.url}>
+  <a className={anchorStyle(props)} href={props.url}>
     {props.content}
   </a>
 );

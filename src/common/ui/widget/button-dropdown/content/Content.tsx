@@ -1,14 +1,33 @@
+import TailwindStyle from "common/tailwind/TailwindStyle";
 import Action, { ActionProps } from "common/ui/components/action/Action";
+import {
+  bgColorHoverableStyle,
+  bgColorStyle
+} from "common/ui/style/CommonStyles";
 import { FunctionComponent } from "react";
+
+const contentStyle = TailwindStyle.builder()
+  .add(`flex flex-col w-28 shadow-xl`)
+  .add(`border border-dark-light rounded-md`)
+  .add(`absolute left-2`)
+  .add(bgColorStyle({}))
+  .get();
+
+const itemStyle = TailwindStyle.builder()
+  .add(`p-2 w-full cursor-pointer rounded-md`)
+  .add(bgColorHoverableStyle({}))
+  .get();
 
 export interface ContentProps {
   actions?: ActionProps[];
 }
 
 const Content: FunctionComponent<ContentProps> = (props: ContentProps) => (
-  <div className={`flex flex-col w-28 shadow-xl border border-gray-200 px-2 py-2 space-y-2 rounded-md absolute bg-gray-50 left-2`}>
+  <div className={contentStyle}>
     {props.actions?.map((action) => (
-      <Action {...action} />
+      <div className={itemStyle}>
+        <Action {...action} />
+      </div>
     ))}
   </div>
 );

@@ -9,7 +9,7 @@ const isLastLevel = (i: number, props: BreadcrumbProps) =>
   i === props.levels.length - 1;
 
 const getColor = (i: number, props: BreadcrumbProps) =>
-  !isLastLevel(i, props) ? "info" : "dark";
+  !isLastLevel(i, props) ? "info" : undefined;
 interface BreadcrumbProps {
   levels: ActionLinkProps[];
 }

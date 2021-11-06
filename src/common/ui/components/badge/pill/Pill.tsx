@@ -4,7 +4,7 @@ import TextContentProps from "common/ui/common/props/TextContentProps";
 import { bgColorStyle } from "common/ui/style/CommonStyles";
 import { FunctionComponent } from "react";
 
-const getClassName = (props: PillProps) =>
+const pillStyle = (props: PillProps) =>
   TailwindStyle.builder()
     .add(`rounded-xl text-center px-3 font-bold`)
     .add(bgColorStyle(props))
@@ -13,7 +13,7 @@ const getClassName = (props: PillProps) =>
 interface PillProps extends TextContentProps, ColorProps {}
 
 const Pill: FunctionComponent<PillProps> = (props: PillProps) => (
-  <div className={getClassName(props)}>{props.content?.toUpperCase()}</div>
+  <div className={pillStyle(props)}>{props.content?.toUpperCase()}</div>
 );
 
 export default Pill;
