@@ -5,7 +5,7 @@ import { FunctionComponent } from "react";
 const getTabHeaderStyle = (i: number, active: number) =>
   TailwindStyle.builder()
     .add(transitionStyle())
-    .add(`text-center w-full cursor-pointer border-b-2 `)
+    .add(`text-center w-full cursor-pointer border-b-4`)
     .addIf(`border-primary`, i === active)
     .addIf(`border-transparent`, i !== active)
     .get();

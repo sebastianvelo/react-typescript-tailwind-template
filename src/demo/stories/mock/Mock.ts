@@ -7,7 +7,7 @@ export const sectionProps = {
     size: "3xl" as Size,
     className: "bg-dark p-2",
     color: "primary" as Color,
-    content: "Messages"
+    content: "Stories"
   }
 };
 

@@ -16,19 +16,19 @@ export const checkboxListProps = {
     {
       children: "First checkbox",
       checkbox: {
-        label: "first"
+        label: "First"
       }
     },
     {
       children: "Second checkbox",
       checkbox: {
-        label: "second"
+        label: "Second"
       }
     },
     {
       children: "Third checkbox",
       checkbox: {
-        label: "thrid"
+        label: "Thrid"
       }
     }
   ]
