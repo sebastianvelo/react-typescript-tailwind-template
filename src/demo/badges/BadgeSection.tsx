@@ -1,8 +1,8 @@
-import Dot from "common/ui/components/badge/dot/Dot";
-import Pill from "common/ui/components/badge/pill/Pill";
-import Row from "common/ui/widget/row/Row";
-import Section from "common/ui/widget/section/Section";
-import Notification from "common/ui/components/badge/notification/Notification";
+import Dot from "common/ui/atomic/badge/dot/Dot";
+import Pill from "common/ui/atomic/badge/pill/Pill";
+import Row from "common/ui/components/row/Row";
+import Section from "common/ui/layout/section/Section";
+import Notification from "common/ui/atomic/badge/notification/Notification";
 import { FunctionComponent } from "react";
 import { sectionProps } from "./mock/Mock";
 

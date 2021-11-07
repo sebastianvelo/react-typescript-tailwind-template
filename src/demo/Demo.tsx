@@ -1,6 +1,9 @@
 import TailwindStyle from "common/tailwind/TailwindStyle";
-import { bgColorStyle, divideColorStyle } from "common/ui/style/CommonStyles";
-import Row from "common/ui/widget/row/Row";
+import Row from "common/ui/components/row/Row";
+import {
+  divideColorStyle,
+  bgColorStyle
+} from "common/ui/lib/style/CommonStyles";
 import { FunctionComponent } from "react";
 import ActionSection from "./actions/ActionSection";
 import BadgeSection from "./badges/BadgeSection";
@@ -11,28 +14,32 @@ import StorySection from "./stories/StorySection";
 import TabsSection from "./tabs/TabsSection";
 
 const demoStyle = TailwindStyle.builder()
-  .add(`min-h-screen w-screen`)
+  .add(`min-h-screen w-screen divide-y-2`)
   .add(divideColorStyle({}))
   .add(bgColorStyle({}))
+  .get();
+
+const rowStyle = TailwindStyle.builder()
+  .add(`divide-x-4 divide-dark dark:divide-light`)
   .get();
 
 interface DemoProps {}
 
 const Demo: FunctionComponent<DemoProps> = () => (
   <div className={demoStyle}>
-    <Row className={`divide-x-2 divide-dark dark:divide-light`} responsive>
+    <Row className={rowStyle} responsive sm>
       <BadgeSection />
       <ActionSection />
     </Row>
-    <Row className={`divide-x-2 divide-dark dark:divide-light`} responsive>
+    <Row className={rowStyle} responsive>
       <BreadcrumbSection />
       <TabsSection />
     </Row>
-    <Row className={`divide-x-2 divide-dark dark:divide-light`} responsive>
+    <Row className={rowStyle} responsive>
       <CheckboxSection />
       <StorySection />
     </Row>
-    <Row className={`divide-x-2 divide-dark dark:divide-light`} responsive>
+    <Row className={rowStyle} responsive>
       <MessageSection />
     </Row>
   </div>

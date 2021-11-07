@@ -1,5 +1,5 @@
-import Title from "common/ui/components/title/Title";
-import Color from "common/ui/types/color/Color";
+import Title from "common/ui/atomic/title/Title";
+import Color from "common/ui/lib/types/color/Color";
 
 const tabProps = (i: number, color: Color) => ({
   header: `Tab ${i}`,

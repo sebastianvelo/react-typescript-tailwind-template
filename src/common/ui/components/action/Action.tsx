@@ -1,7 +1,7 @@
 import { FunctionComponent } from "react";
-import ActionAnchor, { ActionAnchorProps } from "./anchor/ActionAnchor";
-import ActionButton, { ActionButtonProps } from "./button/ActionButton";
-import ActionLink, { ActionLinkProps } from "./link/ActionLink";
+import ActionAnchor, { ActionAnchorProps } from "../../atomic/anchor/ActionAnchor";
+import ActionButton, { ActionButtonProps } from "../../atomic/button/ActionButton";
+import ActionLink, { ActionLinkProps } from "../../atomic/link/ActionLink";
 
 const getComponent = (props: ActionProps) => {
   if (props.route) return <ActionLink {...props} />;

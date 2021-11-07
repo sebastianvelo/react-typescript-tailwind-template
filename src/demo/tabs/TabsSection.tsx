@@ -1,6 +1,6 @@
-import Row from "common/ui/widget/row/Row";
-import Section from "common/ui/widget/section/Section";
-import Tabs from "common/ui/widget/tabs/Tabs";
+import Row from "common/ui/components/row/Row";
+import Section from "common/ui/layout/section/Section";
+import Tabs from "common/ui/components/tabs/Tabs";
 import { FunctionComponent } from "react";
 import { tabsProps } from "./mock/Mock";
 

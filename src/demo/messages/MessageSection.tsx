@@ -1,6 +1,6 @@
-import Message from "common/ui/widget/message/Message";
-import Row from "common/ui/widget/row/Row";
-import Section from "common/ui/widget/section/Section";
+import Message from "common/ui/components/message/Message";
+import Row from "common/ui/components/row/Row";
+import Section from "common/ui/layout/section/Section";
 import { FunctionComponent } from "react";
 import { sectionProps } from "./mock/Mock";
 

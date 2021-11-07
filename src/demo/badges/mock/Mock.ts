@@ -1,5 +1,5 @@
-import Color from "common/ui/types/color/Color";
-import Size from "common/ui/types/size/Size";
+import Color from "common/ui/lib/types/color/Color";
+import Size from "common/ui/lib/types/size/Size";
 
 export const sectionProps = {
   className: `w-full`,
