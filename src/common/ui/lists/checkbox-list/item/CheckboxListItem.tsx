@@ -5,7 +5,7 @@ import CheckboxLabel, {
 } from "common/ui/atomic/checkbox/CheckboxLabel";
 import { bgColorHoverableStyle } from "common/ui/lib/style/CommonStyles";
 import { FunctionComponent } from "react";
-import Row from "../../../components/row/Row";
+import Row from "../../../layout/row/Row";
 
 const itemStyle = TailwindStyle.builder()
   .add(`items-center cursor-pointer justify-between h-10 px-2`)

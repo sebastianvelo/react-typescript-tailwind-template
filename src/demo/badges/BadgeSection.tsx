@@ -1,6 +1,6 @@
 import Dot from "common/ui/atomic/badge/dot/Dot";
 import Pill from "common/ui/atomic/badge/pill/Pill";
-import Row from "common/ui/components/row/Row";
+import Row from "common/ui/layout/row/Row";
 import Section from "common/ui/layout/section/Section";
 import Notification from "common/ui/atomic/badge/notification/Notification";
 import { FunctionComponent } from "react";

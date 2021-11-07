@@ -5,8 +5,8 @@ export const sectionProps = {
   className: `w-full`,
   title: {
     size: "3xl" as Size,
-    className: "bg-dark p-2",
-    color: "primary" as Color,
+    className: "bg-primary p-2",
+    color: "dark" as Color,
     content: "Checkbox"
   }
 };

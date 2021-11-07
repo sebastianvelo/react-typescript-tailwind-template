@@ -1,5 +1,5 @@
 import Action, { ActionProps } from "common/ui/components/action/Action";
-import Row from "common/ui/components/row/Row";
+import Row from "common/ui/layout/row/Row";
 import { FunctionComponent } from "react";
 
 export interface ActionsProps {

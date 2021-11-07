@@ -1,6 +1,6 @@
 import Action from "common/ui/components/action/Action";
 import ButtonDropdown from "common/ui/components/button-dropdown/ButtonDropdown";
-import Row from "common/ui/components/row/Row";
+import Row from "common/ui/layout/row/Row";
 import Section from "common/ui/layout/section/Section";
 import { FunctionComponent } from "react";
 import { actions, dropdownActions, sectionProps } from "./mock/Mock";

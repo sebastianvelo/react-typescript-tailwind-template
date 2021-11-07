@@ -1,6 +1,6 @@
 import useModal from "common/hooks/useModal";
 import ActionButton from "common/ui/atomic/button/ActionButton";
-import Row from "common/ui/components/row/Row";
+import Row from "common/ui/layout/row/Row";
 import Section from "common/ui/layout/section/Section";
 import { FunctionComponent } from "react";
 import { modalProps, sectionProps } from "./mock/Mock";

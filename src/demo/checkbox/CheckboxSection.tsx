@@ -1,6 +1,6 @@
 import CheckboxLabel from "common/ui/atomic/checkbox/CheckboxLabel";
 import CheckboxList from "common/ui/lists/checkbox-list/CheckboxList";
-import Row from "common/ui/components/row/Row";
+import Row from "common/ui/layout/row/Row";
 import Section from "common/ui/layout/section/Section";
 import { FunctionComponent } from "react";
 import { checkboxListProps, sectionProps } from "./mock/Mock";

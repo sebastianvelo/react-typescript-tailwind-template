@@ -5,7 +5,7 @@ import Text from "common/ui/atomic/text/Text";
 import Title from "common/ui/atomic/title/Title";
 import { bgColorHoverableStyle } from "common/ui/lib/style/CommonStyles";
 import { FunctionComponent } from "react";
-import Row from "../row/Row";
+import Row from "../../layout/row/Row";
 
 const styleStyle = (props: StoryProps) =>
   TailwindStyle.builder()

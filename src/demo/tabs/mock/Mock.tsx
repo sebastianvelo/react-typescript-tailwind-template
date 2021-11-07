@@ -7,8 +7,8 @@ export const sectionProps = {
   className: `w-full`,
   title: {
     size: "3xl" as Size,
-    className: "bg-dark p-2",
-    color: "primary" as Color,
+    className: "bg-primary p-2",
+    color: "dark" as Color,
     content: "Tabs"
   }
 };
@@ -17,8 +17,8 @@ const tabProps = (i: number, color: Color) => ({
   header: `Tab ${i}`,
   content: (
     <Article
-      className={`w-full h-96 bg-${color}-dark p-6`}
-      title={{ color: "light", content: `Tab ${i} content`, size: "xl" }}
+      className={`w-full h-96 bg-${color} p-6`}
+      title={{ content: `Tab ${i} content`, size: "xl" }}
     >
       <Text
         content={

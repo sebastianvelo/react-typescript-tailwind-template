@@ -1,17 +1,17 @@
+import Loading from "common/ui/components/loading/Loading";
 import Row from "common/ui/layout/row/Row";
 import Section from "common/ui/layout/section/Section";
-import Tabs from "common/ui/components/tabs/Tabs";
 import { FunctionComponent } from "react";
-import { sectionProps, tabsProps } from "./mock/Mock";
+import { sectionProps } from "./mock/Mock";
 
-const TabsSection: FunctionComponent = () => (
+const LoadingSection: FunctionComponent = () => (
   <Section
     {...sectionProps}
     articles={[
       {
         children: (
-          <Row className="md:space-x-2">
-            <Tabs {...tabsProps} />
+          <Row>
+            <Loading isLoading={false} content={`Some info text...`}/>
           </Row>
         )
       }
@@ -19,4 +19,4 @@ const TabsSection: FunctionComponent = () => (
   />
 );
 
-export default TabsSection;
+export default LoadingSection;

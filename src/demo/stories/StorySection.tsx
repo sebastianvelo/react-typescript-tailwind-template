@@ -1,4 +1,4 @@
-import Row from "common/ui/components/row/Row";
+import Row from "common/ui/layout/row/Row";
 import Section from "common/ui/layout/section/Section";
 import Story from "common/ui/components/story/Story";
 import Stories from "common/ui/lists/stories/Stories";
