@@ -2,17 +2,11 @@ import Breadcrumb from "common/ui/widget/breadcrumb/Breadcrumb";
 import Row from "common/ui/widget/row/Row";
 import Section from "common/ui/widget/section/Section";
 import { FunctionComponent } from "react";
-import { breadcrumbProps } from "./mock/BreadcrumbMock";
+import { breadcrumbProps, sectionProps } from "./mock/Mock";
 
 const BreadcrumbSection: FunctionComponent = () => (
   <Section
-    className={`w-full`}
-    title={{
-      content: "Breadcrumb",
-      size: "3xl",
-      className: "bg-dark p-2",
-      color: "primary"
-    }}
+    {...sectionProps}
     articles={[
       {
         children: (

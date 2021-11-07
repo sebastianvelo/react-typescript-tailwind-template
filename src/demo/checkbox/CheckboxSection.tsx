@@ -3,17 +3,11 @@ import CheckboxList from "common/ui/widget/checkbox-list/CheckboxList";
 import Row from "common/ui/widget/row/Row";
 import Section from "common/ui/widget/section/Section";
 import { FunctionComponent } from "react";
-import { checkboxListProps } from "./mock/CheckboxMock";
+import { checkboxListProps, sectionProps } from "./mock/Mock";
 
 const CheckboxSection: FunctionComponent = () => (
   <Section
-    className={`w-full`}
-    title={{
-      content: "Checkbox",
-      size: "3xl",
-      className: "bg-dark p-2",
-      color: "primary"
-    }}
+    {...sectionProps}
     articles={[
       {
         title: { size: "2xl", content: "Checkbox" },

@@ -2,7 +2,7 @@ import Row from "common/ui/widget/row/Row";
 import Section from "common/ui/widget/section/Section";
 import Tabs from "common/ui/widget/tabs/Tabs";
 import { FunctionComponent } from "react";
-import { tabsProps } from "./mock/TabsMock";
+import { tabsProps } from "./mock/Mock";
 
 const TabsSection: FunctionComponent = () => (
   <Section

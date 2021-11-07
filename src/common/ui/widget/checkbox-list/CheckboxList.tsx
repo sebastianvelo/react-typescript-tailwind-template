@@ -1,3 +1,4 @@
+import { divideColorStyle } from "common/ui/style/CommonStyles";
 import { FunctionComponent } from "react";
 import CheckboxListItem, {
   CheckboxListItemProps
@@ -9,7 +10,7 @@ interface CheckboxListProps {
 }
 
 const CheckboxList: FunctionComponent<CheckboxListProps> = (props) => (
-  <div className="w-full">
+  <div className={`w-full divide-y ${divideColorStyle({})}`}>
     {props.items?.map((item) => (
       <CheckboxListItem {...item} left={props.left} />
     ))}

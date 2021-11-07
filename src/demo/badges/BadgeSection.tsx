@@ -4,16 +4,11 @@ import Row from "common/ui/widget/row/Row";
 import Section from "common/ui/widget/section/Section";
 import Notification from "common/ui/components/badge/notification/Notification";
 import { FunctionComponent } from "react";
+import { sectionProps } from "./mock/Mock";
 
 const BadgeSection: FunctionComponent = () => (
   <Section
-    className={`w-full`}
-    title={{
-      content: "Badge",
-      size: "3xl",
-      className: "bg-dark p-2",
-      color: "primary"
-    }}
+    {...sectionProps}
     articles={[
       {
         title: { size: "2xl", content: "Pill" },

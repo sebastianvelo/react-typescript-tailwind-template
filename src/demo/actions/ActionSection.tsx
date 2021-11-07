@@ -3,17 +3,11 @@ import ButtonDropdown from "common/ui/widget/button-dropdown/ButtonDropdown";
 import Row from "common/ui/widget/row/Row";
 import Section from "common/ui/widget/section/Section";
 import { FunctionComponent } from "react";
-import { actions, dropdownActions } from "./mock/ActionMock";
+import { actions, dropdownActions, sectionProps } from "./mock/Mock";
 
 const ActionSection: FunctionComponent = () => (
   <Section
-    className={`w-full`}
-    title={{
-      size: "3xl",
-      className: "bg-dark p-2",
-      color: "primary",
-      content: "Actions"
-    }}
+    {...sectionProps}
     articles={[
       {
         title: { size: "2xl", content: "Buttons" },

@@ -3,11 +3,9 @@ import Section from "common/ui/widget/section/Section";
 import Stories from "common/ui/widget/stories/Stories";
 import Story from "common/ui/widget/story/Story";
 import { FunctionComponent } from "react";
-import { storiesProps, storyProps } from "./mock/StoryMock";
+import { storiesProps, storyProps } from "./mock/Mock";
 
-interface StorySectionProps {}
-
-const StorySection: FunctionComponent<StorySectionProps> = () => (
+const StorySection: FunctionComponent = () => (
   <Section
     className={`w-full`}
     title={{

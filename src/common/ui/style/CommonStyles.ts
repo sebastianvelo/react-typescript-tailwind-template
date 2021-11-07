@@ -12,12 +12,15 @@ export const hoverableStyle = () =>
 export const textColorStyle = (props: ColorProps) =>
   TailwindStyle.builder()
     .addIf(`text-dark`, props.color === "dark")
-    .addIf(`text-secondary`, props.color === "secondary")
+    .addIf(`text-light `, props.color === "light")
+    .addIf(
+      `text-secondary dark:text-secondary-light`,
+      props.color === "secondary"
+    )
     .addIf(`text-warning`, props.color === "warning")
     .addIf(`text-danger`, props.color === "danger")
     .addIf(`text-success`, props.color === "success")
     .addIf(`text-primary`, props.color === "primary")
-    .addIf(`text-light`, props.color === "light")
     .addIf(`text-info`, props.color === "info")
     .get();
 
@@ -25,7 +28,10 @@ export const textColorHoverableStyle = (props: ColorProps) =>
   TailwindStyle.builder()
     .add(hoverableStyle())
     .addIf(`hover:text-dark-light`, props.color === "dark")
-    .addIf(`dark:hover:text-secondary-light hover:text-secondary-dark`, props.color === "secondary")
+    .addIf(
+      `dark:hover:text-secondary-light hover:text-secondary-dark`,
+      props.color === "secondary"
+    )
     .addIf(`dark:hover:text-warning-light dark`, props.color === "warning")
     .addIf(`dark:hover:text-danger-light dark`, props.color === "danger")
     .addIf(`dark:hover:text-success-light dark`, props.color === "success")
@@ -43,7 +49,7 @@ export const bgColorStyle = (props: ColorProps) =>
     .addIf(`bg-success-dark text-light`, props.color === "success")
     .addIf(`bg-info text-light`, props.color === "info")
     .addIf(`bg-dark`, props.color === "dark")
-    .addIf(`bg-light`, props.color === "light")
+    .addIf(`bg-light text-dark`, props.color === "light")
     .addIf(`bg-light dark:bg-dark dark:text-light`, !props.color)
     .get();
 
@@ -82,4 +88,30 @@ export const roundedStyle = (props: RoundableProps) =>
     .addIf(`rounded-2xl`, props.radius === "2xl")
     .addIf(`rounded-3xl`, props.radius === "3xl")
     .addIf(`rounded-full`, props.radius === "full")
+    .get();
+
+export const borderColorStyle = (props: ColorProps) =>
+  TailwindStyle.builder()
+    .addIf(`border-dark`, props.color === "dark")
+    .addIf(`border-secondary`, props.color === "secondary")
+    .addIf(`border-warning`, props.color === "warning")
+    .addIf(`border-danger`, props.color === "danger")
+    .addIf(`border-success`, props.color === "success")
+    .addIf(`border-primary`, props.color === "primary")
+    .addIf(`border-light`, props.color === "light")
+    .addIf(`border-info`, props.color === "info")
+    .addIf(`border-dark dark:border-light`, !props.color)
+    .get();
+
+export const divideColorStyle = (props: ColorProps) =>
+  TailwindStyle.builder()
+    .addIf(`divide-dark`, props.color === "dark")
+    .addIf(`divide-secondary`, props.color === "secondary")
+    .addIf(`divide-warning`, props.color === "warning")
+    .addIf(`divide-danger`, props.color === "danger")
+    .addIf(`divide-success`, props.color === "success")
+    .addIf(`divide-primary`, props.color === "primary")
+    .addIf(`divide-light`, props.color === "light")
+    .addIf(`divide-info`, props.color === "info")
+    .addIf(`divide-dark dark:divide-light`, !props.color)
     .get();
