@@ -18,7 +18,7 @@ interface SectionProps extends StyleableProps {
 const Section: FunctionComponent<SectionProps> = (props: SectionProps) => (
   <section className={sectionStyle(props)}>
     <Title {...props.title} />
-    <div className={`px-2 space-y-2`}>
+    <div className={`px-2 space-y-4`}>
       {props.articles?.map((article) => (
         <Article {...article} />
       ))}

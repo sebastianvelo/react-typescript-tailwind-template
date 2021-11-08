@@ -5,7 +5,7 @@ import Title, { TitleProps } from "common/ui/atomic/title/Title";
 import { FunctionComponent } from "react";
 
 const articleStyle = (props: ArticleProps) =>
-  TailwindStyle.builder().add(props.className).add(`py-2 space-y-2`).get();
+  TailwindStyle.builder().add(props.className).add(`space-y-2`).get();
 
 export interface ArticleProps extends ParentProps, StyleableProps {
   title?: TitleProps;

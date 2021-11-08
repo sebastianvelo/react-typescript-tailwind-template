@@ -1,17 +1,17 @@
 import Action, { ActionProps } from "common/ui/components/action/Action";
-import Row from "common/ui/layout/row/Row";
+import StyleableProps from "common/ui/lib/props/StyleableProps";
 import { FunctionComponent } from "react";
 
-export interface ActionsProps {
+export interface ActionsProps extends StyleableProps {
   actions?: ActionProps[];
 }
 
 const Actions: FunctionComponent<ActionsProps> = (props: ActionsProps) => (
-  <Row className="space-x-2 flex items-center">
+  <div className={props.className}>
     {props.actions?.map((action) => (
       <Action {...action} />
     ))}
-  </Row>
+  </div>
 );
 
 export default Actions;

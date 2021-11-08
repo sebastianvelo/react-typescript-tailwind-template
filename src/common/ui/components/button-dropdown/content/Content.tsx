@@ -9,7 +9,7 @@ import { FunctionComponent } from "react";
 const contentStyle = TailwindStyle.builder()
   .add(`flex flex-col w-28 shadow-xl`)
   .add(`border border-dark-light rounded-md`)
-  .add(`absolute left-2`)
+  .add(`absolute left-2 z-40`)
   .add(bgColorStyle({}))
   .get();
 

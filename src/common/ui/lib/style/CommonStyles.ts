@@ -67,6 +67,20 @@ export const bgColorHoverableStyle = (props: ColorProps) =>
     .addIf(`hover:bg-light-dark dark:hover:bg-dark-light`, !props.color)
     .get();
 
+
+export const bgColorQuietHoverableStyle = (props: ColorProps) =>
+TailwindStyle.builder()
+  .addIf(`hover:bg-primary hover:text-light`, props.color === "primary")
+  .addIf(`hover:bg-secondary hover:text-light`, props.color === "secondary")
+  .addIf(`hover:bg-warning-light hover:text-dark`, props.color === "warning")
+  .addIf(`hover:bg-danger hover:text-light`, props.color === "danger")
+  .addIf(`hover:bg-success-dark hover:text-light`, props.color === "success")
+  .addIf(`hover:bg-info hover:text-light`, props.color === "info")
+  .addIf(`hover:bg-dark`, props.color === "dark")
+  .addIf(`hover:bg-light hover:text-dark`, props.color === "light")
+  .addIf(`hover:bg-light dark:hover:bg-dark dark:hover:text-light`, !props.color)
+  .get();
+
 export const textSizeStyle = (props: SizeProps) =>
   TailwindStyle.builder()
     .addIf(`text-md`, !props.size || props.size === "m")

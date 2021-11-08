@@ -1,90 +1,54 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import TailwindStyle from "common/tailwind/TailwindStyle";
-import Card from "common/ui/components/card/Card";
-import Carousel from "common/ui/components/carousel/Carousel";
-import Row from "common/ui/layout/row/Row";
+import Pagination from "common/ui/components/pagination/Pagination";
+import Article from "common/ui/layout/article/Article";
 import {
   bgColorStyle,
   divideColorStyle
 } from "common/ui/lib/style/CommonStyles";
 import Color from "common/ui/lib/types/color/Color";
-import { FunctionComponent } from "react";
-import ActionSection from "./actions/ActionSection";
-import BadgeSection from "./badges/BadgeSection";
-import BreadcrumbSection from "./breadcrumb/BreadcrumbSection";
-import CheckboxSection from "./checkbox/CheckboxSection";
-import LoadingSection from "./loading/LoadingSection";
-import MessageSection from "./messages/MessageSection";
-import ModalSection from "./modal/ModalSection";
-import StorySection from "./stories/StorySection";
-import TabsSection from "./tabs/TabsSection";
-
-export const cardProps = {
-  header: `Title`,
-  body: {
-    title: "Body title",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
-  },
-  footer: {
-    actions: [
-      {
-        content: `Cancel`,
-        url: `#`,
-        onClick: () => {},
-        color: "danger" as Color
-      },
-      {
-        content: `Accept`,
-        url: `#`,
-        onClick: () => {},
-        color: "success" as Color
-      }
-    ]
-  }
-};
+import Actions from "common/ui/lists/actions/Actions";
+import { FunctionComponent, useState } from "react";
+import ComponentSection from "./common/ComponentSection";
+import ComponentSections from "./common/ComponentSections";
+import actionsSection from "./sections/actions/section";
 
 const demoStyle = TailwindStyle.builder()
-  .add(`min-h-screen w-screen divide-y-2 filter`)
-  .add(divideColorStyle({}))
+  .add(`h-screen w-screen flex divide-x-4 divide-primary`)
   .add(bgColorStyle({}))
-  .get();
-
-const rowStyle = TailwindStyle.builder()
-  .add(`divide-x-4 divide-dark dark:divide-light`)
   .get();
 
 interface DemoProps {}
 
-const Demo: FunctionComponent<DemoProps> = () => (
-  <main className={demoStyle}>
-    <Row className={rowStyle} responsive md>
-      <BadgeSection />
-      <ActionSection />
-    </Row>
-    <Row className={rowStyle} responsive md>
-      <BreadcrumbSection />
-      <ModalSection />
-      <LoadingSection />
-    </Row>
-    <Row className={rowStyle} responsive md>
-      <CheckboxSection />
-      <TabsSection />
-    </Row>
-    <Row className={rowStyle} responsive md>
-      <StorySection />
-      <MessageSection />
-    </Row>
-    <Row className={rowStyle} responsive md>
-      <Carousel id="demo">
-        {Array(20)
-          .fill(cardProps)
-          .map((card) => (
-            <div className="w-64 border border-black p-2">
-              <Card {...card} />
-            </div>
-          ))}
-      </Carousel>
-    </Row>
-  </main>
-);
+const Demo: FunctionComponent<DemoProps> = () => {
+  const [component, setComponent] = useState(actionsSection);
+  return (
+    <main className={demoStyle}>
+      <aside className={`w-1/4 h-screen`}>
+        <Article
+          title={{
+            content: "Components",
+            size: "3xl",
+            className: "bg-primary p-2"
+          }}
+        >
+          <Actions
+            className={`flex flex-col`}
+            actions={ComponentSections.map((section) => ({
+              content: section.label,
+              url: `#`,
+              color: "primary" as Color,
+              quiet: true,
+              onClick: () => setComponent(section.props)
+            }))}
+          />
+        </Article>
+      </aside>
+      <div className={`w-3/4`}>
+        <ComponentSection {...component} />
+      </div>
+    </main>
+  );
+};
 
 export default Demo;

@@ -2,12 +2,17 @@ import TailwindStyle from "common/tailwind/TailwindStyle";
 import { transitionStyle } from "common/ui/lib/style/CommonStyles";
 import { FunctionComponent } from "react";
 
-const getTabHeaderStyle = (i: number, active: number) =>
+const getTabStyle = (i: number, active: number) =>
   TailwindStyle.builder()
     .add(transitionStyle())
-    .add(`text-center w-full cursor-pointer border-b-4`)
-    .addIf(`border-primary`, i === active)
+    .add(`text-center w-full cursor-pointer border-b-4 py-2`)
+    .addIf(`border-primary-light`, i === active)
     .addIf(`border-transparent`, i !== active)
+    .get();
+
+const getTabHeaderStyle = () =>
+  TailwindStyle.builder()
+    .add(`flex space-x-2 justify-around overflow-x-scroll flex-nowrap`)
     .get();
 
 interface TabsHeaderProps {
@@ -19,12 +24,10 @@ interface TabsHeaderProps {
 const TabsHeader: FunctionComponent<TabsHeaderProps> = (
   props: TabsHeaderProps
 ) => (
-  <div
-    className={`flex space-x-2 justify-around overflow-x-scroll flex-nowrap`}
-  >
+  <div className={getTabHeaderStyle()}>
     {props.headers?.map((tab, i) => (
       <div
-        className={getTabHeaderStyle(i, props.tabActive)}
+        className={getTabStyle(i, props.tabActive)}
         onClick={() => props.setTabActive(i)}
       >
         {tab}

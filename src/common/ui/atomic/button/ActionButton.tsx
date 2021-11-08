@@ -5,15 +5,23 @@ import StyleableProps from "common/ui/lib/props/StyleableProps";
 import TextContentProps from "common/ui/lib/props/TextContentProps";
 import {
   bgColorStyle,
-  bgColorHoverableStyle
+  bgColorHoverableStyle,
+  borderColorStyle,
+  bgColorQuietHoverableStyle,
+  transitionStyle,
+  textColorStyle,
 } from "common/ui/lib/style/CommonStyles";
 import { FunctionComponent } from "react";
 
 const buttonStyle = (props: ActionButtonProps) =>
   TailwindStyle.builder()
-    .add(`rounded-md text-center px-4 py-2 font-bold`)
-    .add(bgColorStyle(props))
-    .add(bgColorHoverableStyle(props))
+    .add(`rounded-md text-center px-4 py-2 border`)
+    .add(transitionStyle())
+    .addIf(bgColorStyle(props), !props.quiet)
+    .addIf(bgColorHoverableStyle(props), !props.quiet)
+    .add(borderColorStyle(props))
+    .addIf(bgColorQuietHoverableStyle(props), props.quiet)
+    .addIf(textColorStyle({}), props.quiet)
     .add(props.className)
     .get();
 
@@ -23,6 +31,7 @@ export interface ActionButtonProps
     ColorProps,
     ParentProps {
   onClick?: (...x: any[]) => void;
+  quiet?: boolean;
 }
 
 const ActionButton: FunctionComponent<ActionButtonProps> = (
