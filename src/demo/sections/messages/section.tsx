@@ -9,10 +9,10 @@ const messagesSection: ComponentSectionProps = {
       title: { size: "2xl", content: "Loud" },
       children: (
         <Row className="md:space-y-2">
-          <Message color="info" />
-          <Message color="success" />
-          <Message color="warning" />
-          <Message color="danger" />
+          <Message color="info" content={`Lorem ipsum dolor sit amet consectetuer.`} />
+          <Message color="success" content={`Lorem ipsum dolor sit amet consectetuer.`} />
+          <Message color="warning" content={`Lorem ipsum dolor sit amet consectetuer.`} />
+          <Message color="danger" content={`Lorem ipsum dolor sit amet consectetuer.`} />
         </Row>
       )
     },
@@ -20,10 +20,10 @@ const messagesSection: ComponentSectionProps = {
       title: { size: "2xl", content: "Quiet" },
       children: (
         <Row className="md:space-y-2">
-          <Message color="info" quiet />
-          <Message color="success" quiet />
-          <Message color="warning" quiet />
-          <Message color="danger" quiet />
+          <Message color="info" quiet content={`Lorem ipsum dolor sit amet consectetuer.`} />
+          <Message color="success" quiet content={`Lorem ipsum dolor sit amet consectetuer.`} />
+          <Message color="warning" quiet content={`Lorem ipsum dolor sit amet consectetuer.`} />
+          <Message color="danger" quiet content={`Lorem ipsum dolor sit amet consectetuer.`} />
         </Row>
       )
     }

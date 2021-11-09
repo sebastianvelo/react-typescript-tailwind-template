@@ -9,12 +9,64 @@ const paginationSection: ComponentSectionProps = {
       children: (
         <>
           <Row className="md:space-y-2">
-            <Pagination size={10} active={2} color="primary" />
-            <Pagination size={10} active={4} color="secondary" />
-            <Pagination size={10} active={6} color="success" />
-            <Pagination size={10} active={3} color="danger" />
-            <Pagination size={10} active={5} color="warning" />
-            <Pagination size={10} active={7} color="info" />
+            <Pagination
+              size={10}
+              quantityToShow={4}
+              active={1}
+              color="primary"
+            />
+          </Row>
+
+          <Row className="md:space-y-2">
+            <Pagination
+              size={10}
+              quantityToShow={6}
+              active={2}
+              color="secondary"
+            />
+          </Row>
+
+          <Row className="md:space-y-2">
+            <Pagination
+              size={10}
+              quantityToShow={5}
+              active={3}
+              color="success"
+            />
+          </Row>
+
+          <Row className="md:space-y-2">
+            <Pagination
+              size={10}
+              quantityToShow={6}
+              active={4}
+              color="danger"
+            />
+          </Row>
+
+          <Row className="md:space-y-2">
+            <Pagination
+              size={10}
+              quantityToShow={6}
+              active={5}
+              color="warning"
+            />
+          </Row>
+
+          <Row className="md:space-y-2">
+            <Pagination size={10} quantityToShow={6} active={6} color="info" />
+          </Row>
+          <Row className="md:space-y-2">
+            <Pagination size={10} quantityToShow={6} active={7} color="primary" />
+          </Row>
+          <Row className="md:space-y-2">
+            <Pagination size={10} quantityToShow={6} active={8} color="secondary" />
+          </Row>
+          <Row className="md:space-y-2">
+            <Pagination size={10} quantityToShow={6} active={9} color="success" />
+          </Row>
+          <Row className="md:space-y-2">
+            <Pagination size={10} quantityToShow={6} active={10} color="danger" />
           </Row>
         </>
       )

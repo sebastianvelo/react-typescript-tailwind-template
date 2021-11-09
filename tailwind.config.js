@@ -5,6 +5,15 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
+      animation: {
+        up: 'up 0.1s ease-in-out',
+      },
+      keyframes: {
+        up: {
+          '0%': { bottom: '0rem' },
+          '100%': { transform: '3rem' },
+        }
+      },
       transitionProperty: {
         'width': 'width',
         'borderWidth': 'borderWidth',

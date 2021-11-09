@@ -1,10 +1,10 @@
 import TailwindStyle from "common/tailwind/TailwindStyle";
-import Action, { ActionProps } from "common/ui/components/action/Action";
+import { ActionProps } from "common/ui/components/action/Action";
 import {
-  bgColorHoverableStyle,
   bgColorStyle
 } from "common/ui/lib/style/CommonStyles";
 import { FunctionComponent } from "react";
+import ButtonDropdownContentItem from "./item/ButtonDropdownContentItem";
 
 const contentStyle = TailwindStyle.builder()
   .add(`flex flex-col w-28 shadow-xl`)
@@ -13,23 +13,16 @@ const contentStyle = TailwindStyle.builder()
   .add(bgColorStyle({}))
   .get();
 
-const itemStyle = TailwindStyle.builder()
-  .add(`p-2 w-full cursor-pointer rounded-md`)
-  .add(bgColorHoverableStyle({}))
-  .get();
-
-export interface ContentProps {
+export interface ButtonDropdownContentProps {
   actions?: ActionProps[];
 }
 
-const Content: FunctionComponent<ContentProps> = (props: ContentProps) => (
+const ButtonDropdownContent: FunctionComponent<ButtonDropdownContentProps> = (props: ButtonDropdownContentProps) => (
   <div className={contentStyle}>
     {props.actions?.map((action) => (
-      <div className={itemStyle}>
-        <Action {...action} />
-      </div>
+      <ButtonDropdownContentItem {...action} />
     ))}
   </div>
 );
 
-export default Content;
+export default ButtonDropdownContent;

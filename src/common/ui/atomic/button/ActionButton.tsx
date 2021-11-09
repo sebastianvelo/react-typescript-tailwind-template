@@ -32,12 +32,13 @@ export interface ActionButtonProps
     ParentProps {
   onClick?: (...x: any[]) => void;
   quiet?: boolean;
+  disabled?: boolean;
 }
 
 const ActionButton: FunctionComponent<ActionButtonProps> = (
   props: ActionButtonProps
 ) => (
-  <button className={buttonStyle(props)} onClick={props.onClick}>
+  <button disabled={props.disabled} className={buttonStyle(props)} onClick={props.onClick}>
     {props.children ?? props.content}
   </button>
 );

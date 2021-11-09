@@ -2,10 +2,10 @@ import useToggle from "common/hooks/useToggle";
 import { ActionButtonProps } from "common/ui/atomic/button/ActionButton";
 import { FunctionComponent } from "react";
 import Dropdown from "../../atomic/dropdown/Dropdown";
-import Content, { ContentProps } from "./content/Content";
-import Trigger from "./trigger/Trigger";
+import ButtonDropdownContent, { ButtonDropdownContentProps } from "./content/ButtonDropdownContent";
+import ButtonDropdownTrigger from "./trigger/ButtonDropdownTrigger";
 
-interface ButtonDropdownProps extends ActionButtonProps, ContentProps {}
+interface ButtonDropdownProps extends ActionButtonProps, ButtonDropdownContentProps {}
 
 const ButtonDropdown: FunctionComponent<ButtonDropdownProps> = (
   props: ButtonDropdownProps
@@ -13,8 +13,8 @@ const ButtonDropdown: FunctionComponent<ButtonDropdownProps> = (
   const [isOpen, toggleOpen] = useToggle();
   return (
     <Dropdown
-      trigger={<Trigger {...props} toggle={toggleOpen} isOpen={isOpen} />}
-      content={<Content {...props} />}
+      trigger={<ButtonDropdownTrigger {...props} toggle={toggleOpen} isOpen={isOpen} />}
+      content={<ButtonDropdownContent {...props} />}
     />
   );
 };

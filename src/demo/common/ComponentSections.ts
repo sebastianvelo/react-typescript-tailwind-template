@@ -5,6 +5,7 @@ import checkboxSection from "demo/sections/checkbox/section";
 import loadingSection from "demo/sections/loading/section";
 import messagesSection from "demo/sections/messages/section";
 import paginationSection from "demo/sections/pagination/section";
+import snackbarSection from "demo/sections/snackbar/section";
 import storiesSection from "demo/sections/stories/section";
 import tabsSection from "demo/sections/tabs/section";
 
@@ -32,6 +33,10 @@ const ComponentSections = [
   {
     label: "Messages",
     props: messagesSection
+  },
+  {
+    label: "Snackbar",
+    props: snackbarSection
   },
   {
     label: "Stories",
