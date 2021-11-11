@@ -1,6 +1,7 @@
 import TailwindStyle from "common/tailwind/TailwindStyle";
 import ColorProps from "common/ui/lib/props/ColorProps";
 import ParentProps from "common/ui/lib/props/ParentProps";
+import SizeProps from "common/ui/lib/props/SizeProps";
 import StyleableProps from "common/ui/lib/props/StyleableProps";
 import TextContentProps from "common/ui/lib/props/TextContentProps";
 import {
@@ -10,26 +11,29 @@ import {
   bgColorQuietHoverableStyle,
   transitionStyle,
   textColorStyle,
+  buttonSizeStyle,
 } from "common/ui/lib/style/CommonStyles";
 import { FunctionComponent } from "react";
 
 const buttonStyle = (props: ActionButtonProps) =>
   TailwindStyle.builder()
-    .add(`rounded-md text-center px-4 py-2 border`)
+    .add(props.className)
+    .add(`rounded-md text-center border`)
+    .add(buttonSizeStyle(props))
     .add(transitionStyle())
     .addIf(bgColorStyle(props), !props.quiet)
     .addIf(bgColorHoverableStyle(props), !props.quiet)
     .add(borderColorStyle(props))
     .addIf(bgColorQuietHoverableStyle(props), props.quiet)
     .addIf(textColorStyle({}), props.quiet)
-    .add(props.className)
     .get();
 
 export interface ActionButtonProps
   extends TextContentProps,
     StyleableProps,
     ColorProps,
-    ParentProps {
+    ParentProps,
+    SizeProps {
   onClick?: (...x: any[]) => void;
   quiet?: boolean;
   disabled?: boolean;

@@ -1,12 +1,13 @@
 import TailwindStyle from "common/tailwind/TailwindStyle";
 import { ActionProps } from "common/ui/components/action/Action";
 import {
-  bgColorStyle
+  bgColorStyle, transitionStyle
 } from "common/ui/lib/style/CommonStyles";
 import { FunctionComponent } from "react";
 import ButtonDropdownContentItem from "./item/ButtonDropdownContentItem";
 
 const contentStyle = TailwindStyle.builder()
+  .add(transitionStyle())
   .add(`flex flex-col w-28 shadow-xl`)
   .add(`border border-dark-light rounded-md`)
   .add(`absolute left-2 z-40`)

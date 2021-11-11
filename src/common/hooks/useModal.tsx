@@ -3,11 +3,11 @@ import ModalWrapper from "common/ui/components/modal/ModalWrapper";
 import useToggle from "./useToggle";
 
 const useModal = (props: ModalProps): [JSX.Element, () => void] => {
-  const [isOpen, toggleOpen] = useToggle(false);
+  const [isOpen, toggle] = useToggle(false);
 
   return [
-    <ModalWrapper isOpen={isOpen} toggleOpen={toggleOpen} modal={props} />,
-    toggleOpen
+    <ModalWrapper isOpen={isOpen} toggle={toggle} modal={props} />,
+    toggle
   ];
 };
 

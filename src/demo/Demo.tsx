@@ -14,7 +14,7 @@ import ComponentSections from "./common/ComponentSections";
 import actionsSection from "./sections/actions/section";
 
 const demoStyle = TailwindStyle.builder()
-  .add(`h-screen w-screen flex divide-x-4 divide-primary`)
+  .add(`w-screen flex divide-x-4 divide-primary`)
   .add(bgColorStyle({}))
   .get();
 
@@ -24,7 +24,7 @@ const Demo: FunctionComponent<DemoProps> = () => {
   const [component, setComponent] = useState(actionsSection);
   return (
     <main className={demoStyle}>
-      <aside className={`w-1/4 h-screen`}>
+      <aside className={`w-1/4 min-h-screen`}>
         <Article
           title={{
             content: "Components",

@@ -1,40 +1,38 @@
 import Row from "common/ui/layout/row/Row";
-import Color from "common/ui/lib/types/color/Color";
+import ColorProps from "common/ui/lib/props/ColorProps";
 import Actions from "common/ui/lists/actions/Actions";
 import { FunctionComponent, useState } from "react";
 import PaginationControl from "./control/PaginationControl";
 
-interface PaginationProps {
-  size: number;
-  quantityToShow: number;
+interface PaginationProps extends ColorProps {
+  total: number;
+  pagesToShow: number;
   active?: number;
-  onClick?: (page: number) => void;
-  color?: Color;
+  onPageChange?: (page: number) => void;
 }
 
-// eslint-disable-next-line arrow-body-style
 const Pagination: FunctionComponent<PaginationProps> = (
   props: PaginationProps
 ) => {
   const [active, setActive] = useState(props.active ?? 1);
+  const half = Math.floor(props.pagesToShow / 2) + 1;
 
-  const handleClick = (page: number) => {
-    if (props.onClick) props.onClick(page);
-    setActive(page);
-  };
-  const half = Math.floor(props.quantityToShow / 2);
   const getPages = () =>
-    Array(props.quantityToShow)
+    Array(props.pagesToShow)
       .fill("")
       .map((_, i) => i + 1)
       .map((i) =>
-        active < half
-          ? i
-          : active > props.size - half
-          ? i + (props.size - Math.floor(props.quantityToShow))
+        active < half // Active is less than half of quantityToShow
+          ? i // Then return the number
+          : active > props.total - half // Active is greater than the total pages - half of quantityToShow
+          ? i + (props.total - props.pagesToShow) // Then return the number + the difference between size and quantity to show
           : i + (active - half)
       );
 
+  const handleClick = (page: number) => {
+    if (props.onPageChange) props.onPageChange(page);
+    setActive(page);
+  };
   return (
     <Row className={`space-x-2`}>
       <PaginationControl
@@ -48,12 +46,13 @@ const Pagination: FunctionComponent<PaginationProps> = (
           content: `${page}`,
           color: props.color,
           quiet: page !== active,
-          onClick: () => handleClick(page)
+          onClick: () => handleClick(page),
+          className: `w-14`
         }))}
       />
       <PaginationControl
         changePage={() => handleClick(active + 1)}
-        disabled={active === props.size}
+        disabled={active === props.total}
         color={props.color}
         right
       />

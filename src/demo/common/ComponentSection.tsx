@@ -11,7 +11,7 @@ const ComponentSection: FunctionComponent<ComponentSectionProps> = (
   props: ComponentSectionProps
 ) => (
   <Section
-    className={`w-full h-screen`}
+    className={`w-full`}
     title={{ content: props.title, size: "3xl",  className: 'bg-primary p-2' }}
     articles={props.articles?.map((article) => ({
       ...article,

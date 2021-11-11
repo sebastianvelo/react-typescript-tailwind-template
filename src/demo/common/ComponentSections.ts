@@ -4,6 +4,7 @@ import breadcrumbSection from "demo/sections/breadcrumb/section";
 import checkboxSection from "demo/sections/checkbox/section";
 import loadingSection from "demo/sections/loading/section";
 import messagesSection from "demo/sections/messages/section";
+import modalSection from "demo/sections/modal/ModalSection";
 import paginationSection from "demo/sections/pagination/section";
 import snackbarSection from "demo/sections/snackbar/section";
 import storiesSection from "demo/sections/stories/section";
@@ -33,6 +34,10 @@ const ComponentSections = [
   {
     label: "Messages",
     props: messagesSection
+  },
+  {
+    label: "Modal",
+    props: modalSection
   },
   {
     label: "Snackbar",

@@ -10,8 +10,8 @@ const paginationSection: ComponentSectionProps = {
         <>
           <Row className="md:space-y-2">
             <Pagination
-              size={10}
-              quantityToShow={4}
+              total={10}
+              pagesToShow={5}
               active={1}
               color="primary"
             />
@@ -19,8 +19,8 @@ const paginationSection: ComponentSectionProps = {
 
           <Row className="md:space-y-2">
             <Pagination
-              size={10}
-              quantityToShow={6}
+              total={10}
+              pagesToShow={5}
               active={2}
               color="secondary"
             />
@@ -28,8 +28,8 @@ const paginationSection: ComponentSectionProps = {
 
           <Row className="md:space-y-2">
             <Pagination
-              size={10}
-              quantityToShow={5}
+              total={10}
+              pagesToShow={5}
               active={3}
               color="success"
             />
@@ -37,8 +37,8 @@ const paginationSection: ComponentSectionProps = {
 
           <Row className="md:space-y-2">
             <Pagination
-              size={10}
-              quantityToShow={6}
+              total={10}
+              pagesToShow={5}
               active={4}
               color="danger"
             />
@@ -46,27 +46,27 @@ const paginationSection: ComponentSectionProps = {
 
           <Row className="md:space-y-2">
             <Pagination
-              size={10}
-              quantityToShow={6}
+              total={10}
+              pagesToShow={5}
               active={5}
               color="warning"
             />
           </Row>
 
           <Row className="md:space-y-2">
-            <Pagination size={10} quantityToShow={6} active={6} color="info" />
+            <Pagination total={10} pagesToShow={5} active={6} color="info" />
           </Row>
           <Row className="md:space-y-2">
-            <Pagination size={10} quantityToShow={6} active={7} color="primary" />
+            <Pagination total={10} pagesToShow={5} active={7} color="primary" />
           </Row>
           <Row className="md:space-y-2">
-            <Pagination size={10} quantityToShow={6} active={8} color="secondary" />
+            <Pagination total={10} pagesToShow={5} active={8} color="secondary" />
           </Row>
           <Row className="md:space-y-2">
-            <Pagination size={10} quantityToShow={6} active={9} color="success" />
+            <Pagination total={10} pagesToShow={5} active={9} color="success" />
           </Row>
           <Row className="md:space-y-2">
-            <Pagination size={10} quantityToShow={6} active={10} color="danger" />
+            <Pagination total={10} pagesToShow={5} active={10} color="danger" />
           </Row>
         </>
       )

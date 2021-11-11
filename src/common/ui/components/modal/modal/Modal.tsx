@@ -4,8 +4,8 @@ import {
   borderColorStyle
 } from "common/ui/lib/style/CommonStyles";
 import { FunctionComponent } from "react";
-import Action from "../../action/Action";
 import Card, { CardProps } from "../../card/Card";
+import CloseButton from "./close/CloseButton";
 
 const modalStyle = () =>
   TailwindStyle.builder()
@@ -15,12 +15,12 @@ const modalStyle = () =>
     .get();
 
 export interface ModalProps extends CardProps {
-  toggleOpen?: () => void;
+  toggle?: () => void;
 }
 
 const Modal: FunctionComponent<ModalProps> = (props: ModalProps) => (
   <div className={modalStyle()}>
-    <Action content="X" color={"danger"} onClick={props.toggleOpen} className="absolute right-0 mr-6"/>
+    <CloseButton {...props} />
     <Card {...props} />
   </div>
 );

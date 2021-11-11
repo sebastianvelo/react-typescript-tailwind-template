@@ -13,7 +13,7 @@ const modalWrapper = (isOpen: boolean) =>
 
 interface ModalWrapperProps {
   isOpen: boolean;
-  toggleOpen: () => void;
+  toggle: () => void;
   modal: ModalProps;
 }
 
@@ -21,7 +21,7 @@ const ModalWrapper: FunctionComponent<ModalWrapperProps> = (
   props: ModalWrapperProps
 ) => (
   <div className={modalWrapper(props.isOpen)}>
-    <Modal {...props.modal} toggleOpen={props.toggleOpen} />
+    <Modal {...props.modal} toggle={props.toggle} />
   </div>
 );
 
