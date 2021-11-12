@@ -8,7 +8,7 @@ import { FunctionComponent } from "react";
 
 const titleStyle = (props: TitleProps) =>
   TailwindStyle.builder()
-    .add(`font-bold`)
+    .add("font-bold")
     .add(props.className)
     .add(textSizeStyle(props))
     .add(textColorStyle(props))

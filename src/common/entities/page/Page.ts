@@ -1,6 +1,6 @@
 type Page<Props> = {
   route: string;
-  component: React.FC<any>;
+  uiType: string;
   props?: Props;
 };
 export default Page;

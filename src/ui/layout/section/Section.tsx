@@ -7,7 +7,7 @@ import Article, { ArticleProps } from "../article/Article";
 const sectionStyle = (props: SectionProps) =>
   TailwindStyle.builder()
     .add(props.className)
-    .add(`space-y-2`)
+    .add("space-y-2")
     .get();
 
 interface SectionProps extends StyleableProps {
@@ -18,7 +18,7 @@ interface SectionProps extends StyleableProps {
 const Section: FunctionComponent<SectionProps> = (props: SectionProps) => (
   <section className={sectionStyle(props)}>
     <Title {...props.title} />
-    <div className={`px-2 space-y-4`}>
+    <div className={"px-2 space-y-4"}>
       {props.articles?.map((article) => (
         <Article {...article} />
       ))}

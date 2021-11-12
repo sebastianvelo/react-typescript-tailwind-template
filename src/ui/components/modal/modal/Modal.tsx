@@ -9,7 +9,7 @@ import CloseButton from "./close/CloseButton";
 
 const modalStyle = () =>
   TailwindStyle.builder()
-    .add(`w-1/2 h-96 border px-8 py-4 rounded-md relative`)
+    .add("w-1/2 h-96 border px-8 py-4 rounded-md relative")
     .add(borderColorStyle({}))
     .add(bgColorStyle({}))
     .get();

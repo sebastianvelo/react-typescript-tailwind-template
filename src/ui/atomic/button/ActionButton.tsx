@@ -18,7 +18,7 @@ import { FunctionComponent } from "react";
 const buttonStyle = (props: ActionButtonProps) =>
   TailwindStyle.builder()
     .add(props.className)
-    .add(`rounded-md text-center border`)
+    .add("rounded-md text-center border")
     .add(buttonSizeStyle(props))
     .add(transitionStyle())
     .addIf(bgColorStyle(props), !props.quiet)

@@ -6,7 +6,7 @@ import { FunctionComponent } from "react";
 
 const pillStyle = (props: PillProps) =>
   TailwindStyle.builder()
-    .add(`rounded-xl text-center px-3 font-bold`)
+    .add("rounded-xl text-center px-3 font-bold")
     .add(bgColorStyle(props))
     .get();
 

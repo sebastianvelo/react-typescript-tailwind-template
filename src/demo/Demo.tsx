@@ -1,20 +1,18 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import TailwindStyle from "common/entities/tailwind/TailwindStyle";
-import Pagination from "ui/components/pagination/Pagination";
-import Article from "ui/layout/article/Article";
+import { FunctionComponent, useState } from "react";
 import {
-  bgColorStyle,
-  divideColorStyle
+  bgColorStyle
 } from "ui/common/style/CommonStyles";
 import Color from "ui/common/types/color/Color";
+import Article from "ui/layout/article/Article";
 import Actions from "ui/lists/actions/Actions";
-import { FunctionComponent, useState } from "react";
 import ComponentSection from "./common/ComponentSection";
 import ComponentSections from "./common/ComponentSections";
 import actionsSection from "./sections/actions/section";
 
 const demoStyle = TailwindStyle.builder()
-  .add(`w-screen flex divide-x-4 divide-primary`)
+  .add("w-screen flex divide-x-4 divide-primary")
   .add(bgColorStyle({}))
   .get();
 
@@ -24,7 +22,7 @@ const Demo: FunctionComponent<DemoProps> = () => {
   const [component, setComponent] = useState(actionsSection);
   return (
     <main className={demoStyle}>
-      <aside className={`w-1/4 min-h-screen`}>
+      <aside className={"w-1/4 min-h-screen"}>
         <Article
           title={{
             content: "Components",
@@ -33,10 +31,10 @@ const Demo: FunctionComponent<DemoProps> = () => {
           }}
         >
           <Actions
-            className={`flex flex-col`}
+            className={"flex flex-col"}
             actions={ComponentSections.map((section) => ({
               content: section.label,
-              url: `#`,
+              url: "#",
               color: "primary" as Color,
               quiet: true,
               onClick: () => setComponent(section.props)
@@ -44,7 +42,7 @@ const Demo: FunctionComponent<DemoProps> = () => {
           />
         </Article>
       </aside>
-      <div className={`w-3/4`}>
+      <div className={"w-3/4"}>
         <ComponentSection {...component} />
       </div>
     </main>

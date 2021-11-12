@@ -8,7 +8,7 @@ import { FunctionComponent } from "react";
 import Row from "../../../layout/row/Row";
 
 const itemStyle = TailwindStyle.builder()
-  .add(`items-center cursor-pointer justify-between h-10 px-2`)
+  .add("items-center cursor-pointer justify-between h-10 px-2")
   .add(bgColorHoverableStyle({}))
   .get();
 

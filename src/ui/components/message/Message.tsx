@@ -11,7 +11,7 @@ import { FunctionComponent } from "react";
 
 const messageStyle = (props: MessageProps) =>
   TailwindStyle.builder()
-    .add(`flex space-x-2 px-2 py-4 w-full rounded-sm  shadow-xl`)
+    .add("flex space-x-2 px-2 py-4 w-full rounded-sm  shadow-xl")
     .addIf(bgColorStyle(props), !props.quiet)
     .addIf(bgColorStyle({ color: "light" }), props.quiet)
     .addIf(`border-l-4 ${borderColorStyle(props)}`, props.quiet)

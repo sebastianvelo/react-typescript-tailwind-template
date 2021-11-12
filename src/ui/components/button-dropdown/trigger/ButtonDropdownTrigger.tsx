@@ -10,7 +10,7 @@ import ActionButton, {
 import { FunctionComponent } from "react";
 
 const dropdownTriggerStyle = TailwindStyle.builder()
-  .add(`flex justify-center items-center space-x-1`)
+  .add("flex justify-center items-center space-x-1")
   .get();
 
 interface ButtonDropdownTriggerProps extends ActionButtonProps {
@@ -29,7 +29,7 @@ const ButtonDropdownTrigger: FunctionComponent<ButtonDropdownTriggerProps> = (
     <div>{props.content}</div>
     <FontAwesomeIcon
       icon={props.isOpen ? faChevronDown : faChevronRight}
-      className={`w-3 h-3`}
+      className={"w-3 h-3"}
     />
   </ActionButton>
 );

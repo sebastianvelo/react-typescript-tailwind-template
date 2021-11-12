@@ -8,9 +8,9 @@ import ButtonDropdownContentItem from "./item/ButtonDropdownContentItem";
 
 const contentStyle = TailwindStyle.builder()
   .add(transitionStyle())
-  .add(`flex flex-col w-28 shadow-xl`)
-  .add(`border border-dark-light rounded-md`)
-  .add(`absolute left-2 z-40`)
+  .add("flex flex-col w-28 shadow-xl")
+  .add("border border-dark-light rounded-md")
+  .add("absolute left-2 z-40")
   .add(bgColorStyle({}))
   .get();
 

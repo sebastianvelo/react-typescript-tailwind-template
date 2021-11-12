@@ -7,7 +7,7 @@ import { FunctionComponent } from "react";
 
 const textStyle = (props: TextProps) =>
   TailwindStyle.builder()
-    .add(`text-justify`)
+    .add("text-justify")
     .add(textSizeStyle(props))
     .add(textColorStyle(props))
     .get();

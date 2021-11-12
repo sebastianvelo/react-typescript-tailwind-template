@@ -5,7 +5,7 @@ import { FunctionComponent } from "react";
 
 const dotStyle = (props: DotProps) =>
   TailwindStyle.builder()
-    .add(`h-3 w-3 rounded-full`)
+    .add("h-3 w-3 rounded-full")
     .add(bgColorStyle(props))
     .get();
 

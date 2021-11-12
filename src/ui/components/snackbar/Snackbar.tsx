@@ -8,9 +8,9 @@ import CloseButton from "./close/CloseButton";
 const snackbarStyle = (props: SnackbarProps) =>
   TailwindStyle.builder()
     .add(transitionStyle())
-    .add(`fixed flex w-full bottom-12 left-0 px-32 z-50 animate-up`)
-    .addIf(`opacity-0`, !props.open)
-    .addIf(`opacity-100`, props.open)
+    .add("fixed flex w-full bottom-12 left-0 px-32 z-50 animate-up")
+    .addIf("opacity-0", !props.open)
+    .addIf("opacity-100", props.open)
     .get();
 
 interface SnackbarProps extends MessageProps {

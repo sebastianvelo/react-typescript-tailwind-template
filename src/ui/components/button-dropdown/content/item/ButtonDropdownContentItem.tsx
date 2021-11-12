@@ -6,7 +6,7 @@ import {
 import { FunctionComponent } from "react";
 
 const itemStyle = TailwindStyle.builder()
-  .add(`p-2 w-full cursor-pointer rounded-md`)
+  .add("p-2 w-full cursor-pointer rounded-md")
   .add(bgColorHoverableStyle({}))
   .get();
 

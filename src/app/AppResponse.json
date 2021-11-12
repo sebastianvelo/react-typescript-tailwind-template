@@ -34,7 +34,13 @@
     },
     "main": {
         "pages": [
-            
+            {
+                "uiType": "button",
+                "route": "/account",
+                "props": {
+                    "content": "The game"
+                }
+            }
         ]
     },
     "footer": {
