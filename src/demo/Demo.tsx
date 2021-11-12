@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import TailwindStyle from "common/tailwind/TailwindStyle";
-import Pagination from "common/ui/components/pagination/Pagination";
-import Article from "common/ui/layout/article/Article";
+import TailwindStyle from "common/entities/tailwind/TailwindStyle";
+import Pagination from "ui/components/pagination/Pagination";
+import Article from "ui/layout/article/Article";
 import {
   bgColorStyle,
   divideColorStyle
-} from "common/ui/lib/style/CommonStyles";
-import Color from "common/ui/lib/types/color/Color";
-import Actions from "common/ui/lists/actions/Actions";
+} from "ui/common/style/CommonStyles";
+import Color from "ui/common/types/color/Color";
+import Actions from "ui/lists/actions/Actions";
 import { FunctionComponent, useState } from "react";
 import ComponentSection from "./common/ComponentSection";
 import ComponentSections from "./common/ComponentSections";

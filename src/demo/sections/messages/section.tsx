@@ -1,5 +1,5 @@
-import Message from "common/ui/components/message/Message";
-import Row from "common/ui/layout/row/Row";
+import Message from "ui/components/message/Message";
+import Row from "ui/layout/row/Row";
 import { ComponentSectionProps } from "demo/common/ComponentSection";
 
 const messagesSection: ComponentSectionProps = {

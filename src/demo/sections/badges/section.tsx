@@ -1,9 +1,9 @@
-import Dot from "common/ui/atomic/badge/dot/Dot";
-import Pill from "common/ui/atomic/badge/pill/Pill";
-import Row from "common/ui/layout/row/Row";
-import Notification from "common/ui/atomic/badge/notification/Notification";
+import Dot from "ui/atomic/badge/dot/Dot";
+import Pill from "ui/atomic/badge/pill/Pill";
+import Row from "ui/layout/row/Row";
+import Notification from "ui/atomic/badge/notification/Notification";
 import { ComponentSectionProps } from "demo/common/ComponentSection";
-import Size from "common/ui/lib/types/size/Size";
+import Size from "ui/common/types/size/Size";
 
 const badgesSection: ComponentSectionProps = {
   title: "Badges",

@@ -1,5 +1,5 @@
-import { ArticleProps } from "common/ui/layout/article/Article";
-import Section from "common/ui/layout/section/Section";
+import { ArticleProps } from "ui/layout/article/Article";
+import Section from "ui/layout/section/Section";
 import { FunctionComponent } from "react";
 
 export interface ComponentSectionProps {

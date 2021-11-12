@@ -1,5 +1,5 @@
-import Breadcrumb from "common/ui/components/breadcrumb/Breadcrumb";
-import Row from "common/ui/layout/row/Row";
+import Breadcrumb from "ui/components/breadcrumb/Breadcrumb";
+import Row from "ui/layout/row/Row";
 import { ComponentSectionProps } from "demo/common/ComponentSection";
 import { breadcrumbProps } from "./mock";
 

@@ -1,6 +1,6 @@
-import Text from "common/ui/atomic/text/Text";
-import Article from "common/ui/layout/article/Article";
-import Color from "common/ui/lib/types/color/Color";
+import Text from "ui/atomic/text/Text";
+import Article from "ui/layout/article/Article";
+import Color from "ui/common/types/color/Color";
 
 const tabProps = (i: number, color: Color) => ({
   header: `Tab ${i}`,

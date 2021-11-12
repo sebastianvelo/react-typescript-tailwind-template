@@ -1,5 +1,5 @@
-import { ModalProps } from "common/ui/components/modal/modal/Modal";
-import ModalWrapper from "common/ui/components/modal/ModalWrapper";
+import { ModalProps } from "ui/components/modal/modal/Modal";
+import ModalWrapper from "ui/components/modal/ModalWrapper";
 import useToggle from "./useToggle";
 
 const useModal = (props: ModalProps): [JSX.Element, () => void] => {

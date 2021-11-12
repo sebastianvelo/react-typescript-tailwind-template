@@ -1,6 +1,6 @@
-import CheckboxLabel from "common/ui/atomic/checkbox/CheckboxLabel";
-import Row from "common/ui/layout/row/Row";
-import CheckboxList from "common/ui/lists/checkbox-list/CheckboxList";
+import CheckboxLabel from "ui/atomic/checkbox/CheckboxLabel";
+import Row from "ui/layout/row/Row";
+import CheckboxList from "ui/lists/checkbox-list/CheckboxList";
 import { ComponentSectionProps } from "demo/common/ComponentSection";
 import { checkboxListProps } from "./mock";
 

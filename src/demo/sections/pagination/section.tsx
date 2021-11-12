@@ -1,5 +1,5 @@
-import Pagination from "common/ui/components/pagination/Pagination";
-import Row from "common/ui/layout/row/Row";
+import Pagination from "ui/components/pagination/Pagination";
+import Row from "ui/layout/row/Row";
 import { ComponentSectionProps } from "demo/common/ComponentSection";
 
 const paginationSection: ComponentSectionProps = {

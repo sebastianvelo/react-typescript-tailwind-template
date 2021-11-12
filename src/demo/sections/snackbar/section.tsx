@@ -1,5 +1,5 @@
-import Snackbar from "common/ui/components/snackbar/Snackbar";
-import Row from "common/ui/layout/row/Row";
+import Snackbar from "ui/components/snackbar/Snackbar";
+import Row from "ui/layout/row/Row";
 import { ComponentSectionProps } from "demo/common/ComponentSection";
 
 const snackbarSection: ComponentSectionProps = {

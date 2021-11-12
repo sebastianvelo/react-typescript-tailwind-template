@@ -1,5 +1,5 @@
-import Tabs from "common/ui/components/tabs/Tabs";
-import Row from "common/ui/layout/row/Row";
+import Tabs from "ui/components/tabs/Tabs";
+import Row from "ui/layout/row/Row";
 import { ComponentSectionProps } from "demo/common/ComponentSection";
 import { tabsProps } from "./mock";
 

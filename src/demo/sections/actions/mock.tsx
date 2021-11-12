@@ -1,4 +1,4 @@
-import Color from "common/ui/lib/types/color/Color";
+import Color from "ui/common/types/color/Color";
 
 export const actions: { content: string; color: Color }[] = [
   {

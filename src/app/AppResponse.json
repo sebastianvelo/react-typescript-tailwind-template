@@ -1,0 +1,46 @@
+{
+    "navigation": {
+        "header": "Tailwind template!",
+        "actions": [
+            {
+                "content": "Home",
+                "route": "/home"
+            },
+            {
+                "content": "Home",
+                "route": "/home"
+            },
+            {
+                "content": "Home",
+                "route": "/home"
+            }
+        ],
+        "menu": {
+            "options": [
+                {
+                    "route": "/profile",
+                    "content": "Profile"
+                },
+                {
+                    "route": "/account",
+                    "content": "Account"
+                }
+            ],
+            "toggler": {
+                "alt": "https://picsum.photos/200",
+                "src": "https://picsum.photos/200"
+            }
+        }
+    },
+    "main": {
+        "pages": [
+            
+        ]
+    },
+    "footer": {
+        "author": {
+            "name": "Sebastian Velo",
+            "linkedin": "https://www.linkedin.com/in/sebastian-velo/"
+        }
+    }
+}

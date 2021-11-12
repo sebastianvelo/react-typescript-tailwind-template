@@ -1,6 +1,6 @@
-import Story from "common/ui/components/story/Story";
-import Row from "common/ui/layout/row/Row";
-import Stories from "common/ui/lists/stories/Stories";
+import Story from "ui/components/story/Story";
+import Row from "ui/layout/row/Row";
+import Stories from "ui/lists/stories/Stories";
 import { ComponentSectionProps } from "demo/common/ComponentSection";
 import { storyProps, storiesProps } from "./mock";
 

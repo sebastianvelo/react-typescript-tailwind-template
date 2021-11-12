@@ -1,7 +1,7 @@
-import Action from "common/ui/components/action/Action";
-import ButtonDropdown from "common/ui/components/button-dropdown/ButtonDropdown";
-import Row from "common/ui/layout/row/Row";
-import Size from "common/ui/lib/types/size/Size";
+import Action from "ui/components/action/Action";
+import ButtonDropdown from "ui/components/button-dropdown/ButtonDropdown";
+import Row from "ui/layout/row/Row";
+import Size from "ui/common/types/size/Size";
 import { ComponentSectionProps } from "demo/common/ComponentSection";
 import { actions, dropdownActions } from "./mock";
 

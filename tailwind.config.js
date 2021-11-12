@@ -21,14 +21,14 @@ module.exports = {
       },
       colors: {
         primary: {
+          light: colors.yellow[300],
+          DEFAULT: colors.yellow[500],
+          dark: colors.yellow[600],
+        },
+        secondary: {
           light: "#2EAADC",
           DEFAULT: "#186A8B",
           dark: "#030D11",
-        },
-        secondary: {
-          light: colors.pink[300],
-          DEFAULT: colors.pink[500],
-          dark: colors.pink[600],
         },
         success: {
           light: colors.green[300],

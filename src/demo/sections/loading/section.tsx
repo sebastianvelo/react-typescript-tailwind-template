@@ -1,5 +1,5 @@
-import Loading from "common/ui/components/loading/Loading";
-import Row from "common/ui/layout/row/Row";
+import Loading from "ui/components/loading/Loading";
+import Row from "ui/layout/row/Row";
 import { ComponentSectionProps } from "demo/common/ComponentSection";
 
 const loadingSection: ComponentSectionProps = {
