@@ -1,6 +1,6 @@
-type Page<Props> = {
+import Widget from "../widget/Widget";
+
+interface Page extends Widget {
   route: string;
-  uiType: string;
-  props?: Props;
 };
 export default Page;

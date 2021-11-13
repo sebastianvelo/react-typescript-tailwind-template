@@ -1,20 +1,19 @@
 import { FunctionComponent } from "react";
-import Footer from "./layout/footer/Footer";
-import Main from "./layout/main/Main";
-import Navigation from "./layout/navigation/Navigation";
-import appResponse from "./AppResponse.json";
+import Loading from "ui/components/loading/Loading";
+import getComponent from "../widget/UIMapper";
+import AppResponse from "../mock/AppResponse.json";
 
-interface AppProps {}
-
-const App: FunctionComponent<AppProps> = () => {
-  const appProps = appResponse;
-
+const App: FunctionComponent = () => {
+  const view = {
+    loading: false,
+    data: {
+      ...AppResponse
+    }
+  }; // useFetch<Widget>({});
   return (
-    <div>
-      <Navigation {...appProps.navigation} />
-      <Main {...appResponse.main} />
-      <Footer {...appResponse.footer} />
-    </div>
+    <Loading isLoading={view?.loading}>
+      {getComponent(view?.data?.uiType, undefined, view?.data?.children)}
+    </Loading>
   );
 };
 
