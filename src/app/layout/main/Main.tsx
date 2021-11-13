@@ -11,7 +11,7 @@ const mainStyle = TailwindStyle.builder()
   .add("from-light via-light-dark to-light text-dark")
   .get();
 export interface MainProps {
-  pages: Page[];
+  pages?: Page[];
 }
 
 const Main: FunctionComponent<MainProps> = (props: MainProps) => {
@@ -20,9 +20,9 @@ const Main: FunctionComponent<MainProps> = (props: MainProps) => {
   return (
     <main className={mainStyle}>
       <Switch>
-        {props.pages.map((page: Page) => (
+        {props.pages?.map((page: Page) => (
           <Route key={page.route} exact path={page.route}>
-            {getComponent(page.uiType, page.data)}
+            {getComponent(page.uiType, page.data, page.children)}
           </Route>
         ))}
       </Switch>

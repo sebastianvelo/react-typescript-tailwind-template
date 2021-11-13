@@ -1,8 +1,8 @@
 import { FunctionComponent } from "react";
 
 export interface AuthorProps {
-    name: string;
-    linkedin: string;
+    name?: string;
+    linkedin?: string;
 }
  
 const Author: FunctionComponent<AuthorProps> = (props: AuthorProps) => (

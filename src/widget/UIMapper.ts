@@ -1,5 +1,10 @@
 import Widget from "common/entities/widget/Widget";
 import React, { FunctionComponent } from "react";
+import Footer from "../app/layout/footer/Footer";
+import Layout from "../app/layout/Layout";
+import Main from "../app/layout/main/Main";
+import Navigation from "../app/layout/navigation/Navigation";
+import View from "../app/view/View";
 import ActionAnchor from "../ui/atomic/anchor/ActionAnchor";
 import Dot from "../ui/atomic/badge/dot/Dot";
 import Notification from "../ui/atomic/badge/notification/Notification";
@@ -23,11 +28,6 @@ import Pagination from "../ui/components/pagination/Pagination";
 import Snackbar from "../ui/components/snackbar/Snackbar";
 import Story from "../ui/components/story/Story";
 import Tabs from "../ui/components/tabs/Tabs";
-import Footer from "../app/layout/footer/Footer";
-import Layout from "../app/layout/Layout";
-import Main from "../app/layout/main/Main";
-import Navigation from "../app/layout/navigation/Navigation";
-import View from "../app/view/View";
 
 const UIMapper = new Map<string, FunctionComponent<any>>();
 UIMapper.set("anchor", ActionAnchor);

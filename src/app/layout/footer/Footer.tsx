@@ -9,7 +9,7 @@ const footerStyle = TailwindStyle.builder()
   .get();
 
 export interface FooterProps {
-  author: AuthorProps;
+  author?: AuthorProps;
 }
 
 const Footer: FunctionComponent<FooterProps> = (props: FooterProps) => (

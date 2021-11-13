@@ -1,18 +1,16 @@
+import useFetch from "common/hooks/useFetch";
 import { FunctionComponent } from "react";
 import Loading from "ui/components/loading/Loading";
-import getComponent from "../widget/UIMapper";
-import AppResponse from "../mock/AppResponse.json";
+import Layout, { LayoutProps } from "./layout/Layout";
 
 const App: FunctionComponent = () => {
-  const view = {
-    loading: false,
-    data: {
-      ...AppResponse
-    }
-  }; // useFetch<Widget>({});
+  const view = useFetch<LayoutProps>({
+    url: "http://localhost:5001/template/us-central1/default/layout",
+    method: "GET"
+  });
   return (
     <Loading isLoading={view?.loading}>
-      {getComponent(view?.data?.uiType, undefined, view?.data?.children)}
+      <Layout {...view?.data} />
     </Loading>
   );
 };
