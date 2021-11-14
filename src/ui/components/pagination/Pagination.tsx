@@ -1,6 +1,6 @@
 import Row from "ui/layout/row/Row";
 import ColorProps from "ui/common/props/ColorProps";
-import Actions from "ui/lists/actions/Actions";
+import ActionList from "ui/lists/actions/ActionList";
 import { FunctionComponent, useState } from "react";
 import PaginationControl from "./control/PaginationControl";
 
@@ -40,7 +40,7 @@ const Pagination: FunctionComponent<PaginationProps> = (
         disabled={active === 1}
         color={props.color}
       />
-      <Actions
+      <ActionList
         className={`space-x-2`}
         actions={getPages().map((page) => ({
           content: `${page}`,

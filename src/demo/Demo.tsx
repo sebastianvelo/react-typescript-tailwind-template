@@ -6,7 +6,7 @@ import {
 } from "ui/common/style/CommonStyles";
 import Color from "ui/common/types/color/Color";
 import Article from "ui/layout/article/Article";
-import Actions from "ui/lists/actions/Actions";
+import ActionList from "ui/lists/actions/ActionList";
 import ComponentSection from "./common/ComponentSection";
 import ComponentSections from "./common/ComponentSections";
 import actionsSection from "./sections/actions/section";
@@ -30,7 +30,7 @@ const Demo: FunctionComponent<DemoProps> = () => {
             className: "bg-primary p-2"
           }}
         >
-          <Actions
+          <ActionList
             className={"flex flex-col"}
             actions={ComponentSections.map((section) => ({
               content: section.label,

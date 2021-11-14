@@ -9,7 +9,7 @@ const Navigation: FunctionComponent<NavigationProps> = (props: NavigationProps) 
   const [isOpen, toggle] = useToggle();
 
   return (
-    <nav className={`flex flex-col items-center bg-primary text-dark divide-y-1 divide-red-900`}>
+    <nav className={`flex flex-col items-center bg-primary text-dark divide-y-1 divide-red-900 px-2`}>
       <NavigationHeader {...props} toggleLinks={() => toggle()} />
       <NavigationActions {...props} isOpen={isOpen} toggleLinks={() => toggle()} />
     </nav>

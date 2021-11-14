@@ -1,7 +1,7 @@
 import Text from "ui/atomic/text/Text";
 import Title from "ui/atomic/title/Title";
 import { borderColorStyle } from "ui/common/style/CommonStyles";
-import Actions from "ui/lists/actions/Actions";
+import ActionList from "ui/lists/actions/ActionList";
 import { FunctionComponent } from "react";
 import { ActionProps } from "../action/Action";
 
@@ -26,7 +26,7 @@ const Card: FunctionComponent<CardProps> = (props: CardProps) => (
       <Text content={props.body?.content} />
     </div>
     <footer className={`border-t ${borderColorStyle({})} w-full p-2 flex`}>
-      <Actions {...props.footer} />
+      <ActionList {...props.footer} />
     </footer>
   </div>
 );

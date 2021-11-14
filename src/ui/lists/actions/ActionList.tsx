@@ -2,11 +2,11 @@ import Action, { ActionProps } from "ui/components/action/Action";
 import StyleableProps from "ui/common/props/StyleableProps";
 import { FunctionComponent } from "react";
 
-export interface ActionsProps extends StyleableProps {
+export interface ActionListProps extends StyleableProps {
   actions?: ActionProps[];
 }
 
-const Actions: FunctionComponent<ActionsProps> = (props: ActionsProps) => (
+const ActionList: FunctionComponent<ActionListProps> = (props: ActionListProps) => (
   <div className={props.className}>
     {props.actions?.map((action) => (
       <Action {...action} />
@@ -14,4 +14,4 @@ const Actions: FunctionComponent<ActionsProps> = (props: ActionsProps) => (
   </div>
 );
 
-export default Actions;
+export default ActionList;
