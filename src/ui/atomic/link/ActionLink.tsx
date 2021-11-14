@@ -1,14 +1,13 @@
 import TailwindStyle from "common/entities/tailwind/TailwindStyle";
+import { FunctionComponent } from "react";
+import { Link } from "react-router-dom";
 import ColorProps from "ui/common/props/ColorProps";
 import ParentProps from "ui/common/props/ParentProps";
 import StyleableProps from "ui/common/props/StyleableProps";
-import TextContentProps from "ui/common/props/TextContentProps";
 import {
   textColorHoverableStyle,
   textColorStyle
 } from "ui/common/style/CommonStyles";
-import { FunctionComponent } from "react";
-import { Link } from "react-router-dom";
 
 const linkStyle = (props: ActionLinkProps) =>
   TailwindStyle.builder()
@@ -18,7 +17,6 @@ const linkStyle = (props: ActionLinkProps) =>
 
 export interface ActionLinkProps
   extends StyleableProps,
-    TextContentProps,
     ColorProps,
     ParentProps {
   route?: string;
@@ -28,7 +26,7 @@ const ActionLink: FunctionComponent<ActionLinkProps> = (
   props: ActionLinkProps
 ) => (
   <Link to={props.route ?? ""} className={linkStyle(props)}>
-    {props.children ?? props.content}
+    {props.children}
   </Link>
 );
 

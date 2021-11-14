@@ -20,7 +20,7 @@ const ButtonDropdown: FunctionComponent<ButtonDropdownProps> = (
       trigger={
         <ButtonDropdownTrigger {...props} toggle={toggleOpen} isOpen={isOpen} />
       }
-      content={<ButtonDropdownContent {...props} />}
+      children={<ButtonDropdownContent {...props} />}
     />
   );
 };

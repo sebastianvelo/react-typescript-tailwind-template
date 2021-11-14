@@ -8,7 +8,7 @@ export interface CloseButtonProps extends CardProps {
 
 const CloseButton: FunctionComponent<CloseButtonProps> = (props: CloseButtonProps) => (
   <Action
-    content="X"
+    children="X"
     color={"danger"}
     onClick={props.toggle}
     className="absolute right-0 mr-6"

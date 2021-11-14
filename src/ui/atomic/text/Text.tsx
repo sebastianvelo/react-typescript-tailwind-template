@@ -1,9 +1,9 @@
 import TailwindStyle from "common/entities/tailwind/TailwindStyle";
-import ColorProps from "ui/common/props/ColorProps";
-import SizeProps from "ui/common/props/SizeProps";
-import TextContentProps from "ui/common/props/TextContentProps";
-import { textColorStyle, textSizeStyle } from "ui/common/style/CommonStyles";
 import { FunctionComponent } from "react";
+import ColorProps from "ui/common/props/ColorProps";
+import ParentProps from "ui/common/props/ParentProps";
+import SizeProps from "ui/common/props/SizeProps";
+import { textColorStyle, textSizeStyle } from "ui/common/style/CommonStyles";
 
 const textStyle = (props: TextProps) =>
   TailwindStyle.builder()
@@ -12,10 +12,10 @@ const textStyle = (props: TextProps) =>
     .add(textColorStyle(props))
     .get();
 
-export interface TextProps extends TextContentProps, ColorProps, SizeProps {}
+export interface TextProps extends ParentProps, ColorProps, SizeProps {}
 
 const Text: FunctionComponent<TextProps> = (props: TextProps) => (
-  <p className={textStyle(props)}>{props.content}</p>
+  <p className={textStyle(props)}>{props.children}</p>
 );
 
 export default Text;

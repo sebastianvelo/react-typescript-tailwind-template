@@ -7,23 +7,23 @@ export const sectionProps = {
     size: "3xl" as Size,
     className: "bg-primary p-2",
     color: "dark" as Color,
-    content: "Breadcrumb"
+    children: "Breadcrumb"
   }
 };
 
 export const breadcrumbProps = {
   levels: [
     {
-      content: "Level 1"
+      children: "Level 1"
     },
     {
-      content: "Level 2"
+      children: "Level 2"
     },
     {
-      content: "Level 3"
+      children: "Level 3"
     },
     {
-      content: "Level 4"
+      children: "Level 4"
     }
   ]
 };

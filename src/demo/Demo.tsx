@@ -25,7 +25,7 @@ const Demo: FunctionComponent<DemoProps> = () => {
       <aside className={"w-1/4 min-h-screen"}>
         <Article
           title={{
-            content: "Components",
+            children: "Components",
             size: "3xl",
             className: "bg-primary p-2"
           }}
@@ -33,7 +33,7 @@ const Demo: FunctionComponent<DemoProps> = () => {
           <ActionList
             className={"flex flex-col"}
             actions={ComponentSections.map((section) => ({
-              content: section.label,
+              children: section.label,
               url: "#",
               color: "primary" as Color,
               quiet: true,

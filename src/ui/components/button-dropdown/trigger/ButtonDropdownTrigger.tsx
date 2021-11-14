@@ -26,7 +26,7 @@ const ButtonDropdownTrigger: FunctionComponent<ButtonDropdownTriggerProps> = (
     onClick={props.toggle}
     className={dropdownTriggerStyle}
   >
-    <div>{props.content}</div>
+    <div>{props.children}</div>
     <FontAwesomeIcon
       icon={props.isOpen ? faChevronDown : faChevronRight}
       className={"w-3 h-3"}

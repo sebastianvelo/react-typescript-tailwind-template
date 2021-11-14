@@ -9,20 +9,20 @@ const badgesSection: ComponentSectionProps = {
   title: "Badges",
   articles: [
     {
-      title: { content: "Pill" },
+      title: { children: "Pill" },
       children: (
         <Row className="md:space-x-2">
-          <Pill content={`primary`} color="primary" />
-          <Pill content={`secondary`} color="secondary" />
-          <Pill content={`danger`} color="danger" />
-          <Pill content={`success`} color="success" />
-          <Pill content={`info`} color="info" />
-          <Pill content={`warning`} color="warning" />
+          <Pill children={`primary`} color="primary" />
+          <Pill children={`secondary`} color="secondary" />
+          <Pill children={`danger`} color="danger" />
+          <Pill children={`success`} color="success" />
+          <Pill children={`info`} color="info" />
+          <Pill children={`warning`} color="warning" />
         </Row>
       )
     },
     {
-      title: { content: "Notification" },
+      title: { children: "Notification" },
       children: (
         <>
           {(["xl", "2xl", "3xl"] as Size[]).map((size: Size) => (
@@ -37,7 +37,7 @@ const badgesSection: ComponentSectionProps = {
       )
     },
     {
-      title: { content: "Dot" },
+      title: { children: "Dot" },
       children: (
         <Row className="md:space-x-2">
           <Dot color="primary" />

@@ -9,7 +9,7 @@ const ModalSection: FunctionComponent = () => {
   const [modal, toggleModal] = useModal(modalProps);
   return (
     <Row>
-      <ActionButton onClick={toggleModal} content="Open modal" color="primary" />
+      <ActionButton onClick={toggleModal} children="Open modal" color="primary" />
       {modal}
     </Row>
   );

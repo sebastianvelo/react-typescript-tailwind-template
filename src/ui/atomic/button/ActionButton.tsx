@@ -1,19 +1,12 @@
 import TailwindStyle from "common/entities/tailwind/TailwindStyle";
+import { FunctionComponent } from "react";
 import ColorProps from "ui/common/props/ColorProps";
 import ParentProps from "ui/common/props/ParentProps";
 import SizeProps from "ui/common/props/SizeProps";
 import StyleableProps from "ui/common/props/StyleableProps";
-import TextContentProps from "ui/common/props/TextContentProps";
 import {
-  bgColorStyle,
-  bgColorHoverableStyle,
-  borderColorStyle,
-  bgColorQuietHoverableStyle,
-  transitionStyle,
-  textColorStyle,
-  buttonSizeStyle,
+  bgColorHoverableStyle, bgColorQuietHoverableStyle, bgColorStyle, borderColorStyle, buttonSizeStyle, textColorStyle, transitionStyle
 } from "ui/common/style/CommonStyles";
-import { FunctionComponent } from "react";
 
 const buttonStyle = (props: ActionButtonProps) =>
   TailwindStyle.builder()
@@ -29,8 +22,7 @@ const buttonStyle = (props: ActionButtonProps) =>
     .get();
 
 export interface ActionButtonProps
-  extends TextContentProps,
-    StyleableProps,
+  extends StyleableProps,
     ColorProps,
     ParentProps,
     SizeProps {
@@ -42,8 +34,12 @@ export interface ActionButtonProps
 const ActionButton: FunctionComponent<ActionButtonProps> = (
   props: ActionButtonProps
 ) => (
-  <button disabled={props.disabled} className={buttonStyle(props)} onClick={props.onClick}>
-    {props.children ?? props.content}
+  <button
+    disabled={props.disabled}
+    className={buttonStyle(props)}
+    onClick={props.onClick}
+  >
+    {props.children}
   </button>
 );
 

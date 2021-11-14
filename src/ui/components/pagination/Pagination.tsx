@@ -43,7 +43,7 @@ const Pagination: FunctionComponent<PaginationProps> = (
       <ActionList
         className={`space-x-2`}
         actions={getPages().map((page) => ({
-          content: `${page}`,
+          children: `${page}`,
           color: props.color,
           quiet: page !== active,
           onClick: () => handleClick(page),

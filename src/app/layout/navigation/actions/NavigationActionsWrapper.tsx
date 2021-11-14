@@ -22,7 +22,7 @@ const NavigationActionsWrapper: FunctionComponent<NavigationActionsWrapperProps>
   (props: NavigationActionsWrapperProps) => (
     <div className={navigationActionsStyle(props)}>
       {props.actions?.map((action) => (
-        <ActionLink {...action} key={action.content} />
+        <ActionLink {...action} key={action.children?.toString()} />
       ))}
     </div>
   );

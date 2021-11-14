@@ -8,7 +8,7 @@ const checkboxSection: ComponentSectionProps = {
   title: "Checkbox",
   articles: [
     {
-      title: { size: "2xl", content: "Checkbox" },
+      title: { size: "2xl", children: "Checkbox" },
       children: (
         <Row className="md:space-x-2">
           <CheckboxLabel
@@ -18,7 +18,7 @@ const checkboxSection: ComponentSectionProps = {
       )
     },
     {
-      title: { size: "2xl", content: "Checkbox list right" },
+      title: { size: "2xl", children: "Checkbox list right" },
       children: (
         <Row className="md:space-x-2">
           <CheckboxList {...checkboxListProps} />
@@ -26,7 +26,7 @@ const checkboxSection: ComponentSectionProps = {
       )
     },
     {
-      title: { size: "2xl", content: "Checkbox list left" },
+      title: { size: "2xl", children: "Checkbox list left" },
       children: (
         <Row className="md:space-x-2">
           <CheckboxList left {...checkboxListProps} />

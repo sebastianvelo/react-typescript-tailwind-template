@@ -1,8 +1,7 @@
 import TailwindStyle from "common/entities/tailwind/TailwindStyle";
+import { FunctionComponent } from "react";
 import Text from "ui/atomic/text/Text";
 import ParentProps from "ui/common/props/ParentProps";
-import TextContentProps from "ui/common/props/TextContentProps";
-import { FunctionComponent } from "react";
 import Spinner from "./spinner/Spinner";
 
 const loadingStyle = TailwindStyle.builder()
@@ -10,7 +9,7 @@ const loadingStyle = TailwindStyle.builder()
   .add("flex flex-col justify-center items-center space-y-4")
   .add("bg-black bg-opacity-80")
   .get();
-interface LoadingProps extends ParentProps, TextContentProps {
+interface LoadingProps extends ParentProps {
   isLoading?: boolean;
 }
 

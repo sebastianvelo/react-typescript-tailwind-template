@@ -8,7 +8,7 @@ const storiesSection: ComponentSectionProps = {
   title: "Stories",
   articles: [
     {
-      title: { size: "2xl", content: "Story" },
+      title: { size: "2xl", children: "Story" },
       children: (
         <Row className="md:space-x-2">
           <div className={`w-full`}>
@@ -18,7 +18,7 @@ const storiesSection: ComponentSectionProps = {
       )
     },
     {
-      title: { size: "2xl", content: "Stories" },
+      title: { size: "2xl", children: "Stories" },
       children: (
         <Row className="md:space-x-2">
           <StoryList stories={storiesProps} />

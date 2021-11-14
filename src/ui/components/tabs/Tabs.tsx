@@ -5,7 +5,7 @@ import TabsHeader from "./header/TabsHeader";
 interface TabsProps {
   tabs?: {
     header: string;
-    content: React.ReactNode | React.ReactNode[];
+    children: React.ReactNode | React.ReactNode[];
   }[];
 }
 
@@ -15,7 +15,7 @@ const Tabs: FunctionComponent<TabsProps> = (props: TabsProps) => {
   return (
     <div className="w-full flex flex-col flex-nowrap">
       <TabsHeader setTabActive={setTabActive} tabActive={tabActive} headers={props.tabs?.map(tab => tab.header)} />
-      <TabsContent tabActive={tabActive} contents={props.tabs?.map(tab => tab.content)} />
+      <TabsContent tabActive={tabActive} contents={props.tabs?.map(tab => tab.children)} />
     </div>
   );
 };

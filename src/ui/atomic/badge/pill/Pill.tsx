@@ -1,8 +1,8 @@
 import TailwindStyle from "common/entities/tailwind/TailwindStyle";
-import ColorProps from "ui/common/props/ColorProps";
-import TextContentProps from "ui/common/props/TextContentProps";
-import { bgColorStyle } from "ui/common/style/CommonStyles";
 import { FunctionComponent } from "react";
+import ColorProps from "ui/common/props/ColorProps";
+import ParentProps from "ui/common/props/ParentProps";
+import { bgColorStyle } from "ui/common/style/CommonStyles";
 
 const pillStyle = (props: PillProps) =>
   TailwindStyle.builder()
@@ -10,10 +10,10 @@ const pillStyle = (props: PillProps) =>
     .add(bgColorStyle(props))
     .get();
 
-interface PillProps extends TextContentProps, ColorProps {}
+interface PillProps extends ColorProps, ParentProps {}
 
 const Pill: FunctionComponent<PillProps> = (props: PillProps) => (
-  <div className={pillStyle(props)}>{props.content?.toUpperCase()}</div>
+  <div className={pillStyle(props)}>{props.children}</div>
 );
 
 export default Pill;

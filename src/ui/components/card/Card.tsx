@@ -19,11 +19,11 @@ export interface CardProps {
 const Card: FunctionComponent<CardProps> = (props: CardProps) => (
   <div className={`space-y-4 relative`}>
     <header>
-      <Title content={props.header} size="3xl" />
+      <Title children={props.header} size="3xl" />
     </header>
     <div className={`space-y-4 overflow-y-scroll h-52`}>
-      <Title content={props.body?.title} size="2xl" />
-      <Text content={props.body?.content} />
+      <Title children={props.body?.title} size="2xl" />
+      <Text children={props.body?.content} />
     </div>
     <footer className={`border-t ${borderColorStyle({})} w-full p-2 flex`}>
       <ActionList {...props.footer} />

@@ -23,7 +23,7 @@ export interface MenuProps {
 const Menu: React.FC<MenuProps> = (props: MenuProps) => (
   <Dropdown
     trigger={<Image className={menuTriggerStyle} {...props.toggler} />}
-    content={
+    children={
       <div className={menuStyle}>
         {props.options.map((link, index) => (
           <Action key={index} {...link} />

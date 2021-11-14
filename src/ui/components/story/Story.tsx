@@ -1,6 +1,6 @@
 import TailwindStyle from "common/entities/tailwind/TailwindStyle";
 import Action, { ActionProps } from "ui/components/action/Action";
-import Image from "ui/atomic/image/Image";
+import Image, { ImageProps } from "ui/atomic/image/Image";
 import Text from "ui/atomic/text/Text";
 import Title from "ui/atomic/title/Title";
 import { bgColorHoverableStyle } from "ui/common/style/CommonStyles";
@@ -14,10 +14,7 @@ const styleStyle = (props: StoryProps) =>
     .get();
 
 export interface StoryProps extends ActionProps {
-  img?: {
-    alt: string;
-    src: string;
-  };
+  img?: ImageProps;
   title?: string;
   subtitle?: string;
   text?: string;
@@ -30,11 +27,11 @@ const Story: FunctionComponent<StoryProps> = (props: StoryProps) => (
       <Row className={"justify-between items-center space-x-4"}>
         <Image {...props.img} radius="full" className={"h-16 w-16"} />
         <div>
-          <Title content={props.title} size={"xl"}></Title>
-          <Text content={props.subtitle} size={"l"}></Text>
+          <Title children={props.title} size={"xl"}></Title>
+          <Text children={props.subtitle} size={"l"}></Text>
         </div>
       </Row>
-      <Text content={props.text}></Text>
+      <Text children={props.text}></Text>
     </Row>
   </Action>
 );

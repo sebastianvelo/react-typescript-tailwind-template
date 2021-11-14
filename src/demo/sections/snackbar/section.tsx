@@ -9,7 +9,7 @@ const snackbarSection: ComponentSectionProps = {
       children: (
         <Row className="md:space-x-2">
           <div className={`w-full`}>
-            <Snackbar color="info" open content={`Lorem ipsum dolor sit amet consectetuer.`}/>
+            <Snackbar color="info" open children={`Lorem ipsum dolor sit amet consectetuer.`}/>
           </div>
         </Row>
       )

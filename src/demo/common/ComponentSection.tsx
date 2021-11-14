@@ -12,7 +12,7 @@ const ComponentSection: FunctionComponent<ComponentSectionProps> = (
 ) => (
   <Section
     className={`w-full`}
-    title={{ content: props.title, size: "3xl",  className: 'bg-primary p-2' }}
+    title={{ children: props.title, size: "3xl",  className: 'bg-primary p-2' }}
     articles={props.articles?.map((article) => ({
       ...article,
       title: { ...article.title, size: "2xl" }

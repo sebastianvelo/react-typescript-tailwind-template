@@ -6,24 +6,24 @@ const messagesSection: ComponentSectionProps = {
   title: "Message",
   articles: [
     {
-      title: { size: "2xl", content: "Loud" },
+      title: { size: "2xl", children: "Loud" },
       children: (
         <Row className="md:space-y-2">
-          <Message color="info" content={`Lorem ipsum dolor sit amet consectetuer.`} />
-          <Message color="success" content={`Lorem ipsum dolor sit amet consectetuer.`} />
-          <Message color="warning" content={`Lorem ipsum dolor sit amet consectetuer.`} />
-          <Message color="danger" content={`Lorem ipsum dolor sit amet consectetuer.`} />
+          <Message color="info" children={`Lorem ipsum dolor sit amet consectetuer.`} />
+          <Message color="success" children={`Lorem ipsum dolor sit amet consectetuer.`} />
+          <Message color="warning" children={`Lorem ipsum dolor sit amet consectetuer.`} />
+          <Message color="danger" children={`Lorem ipsum dolor sit amet consectetuer.`} />
         </Row>
       )
     },
     {
-      title: { size: "2xl", content: "Quiet" },
+      title: { size: "2xl", children: "Quiet" },
       children: (
         <Row className="md:space-y-2">
-          <Message color="info" quiet content={`Lorem ipsum dolor sit amet consectetuer.`} />
-          <Message color="success" quiet content={`Lorem ipsum dolor sit amet consectetuer.`} />
-          <Message color="warning" quiet content={`Lorem ipsum dolor sit amet consectetuer.`} />
-          <Message color="danger" quiet content={`Lorem ipsum dolor sit amet consectetuer.`} />
+          <Message color="info" quiet children={`Lorem ipsum dolor sit amet consectetuer.`} />
+          <Message color="success" quiet children={`Lorem ipsum dolor sit amet consectetuer.`} />
+          <Message color="warning" quiet children={`Lorem ipsum dolor sit amet consectetuer.`} />
+          <Message color="danger" quiet children={`Lorem ipsum dolor sit amet consectetuer.`} />
         </Row>
       )
     }

@@ -1,47 +1,47 @@
 import Color from "ui/common/types/color/Color";
 
-export const actions: { content: string; color: Color }[] = [
+export const actions: { children: string; color: Color }[] = [
   {
-    content: "Primary",
+    children: "Primary",
     color: "primary"
   },
   {
-    content: "Secondary",
+    children: "Secondary",
     color: "secondary"
   },
   {
-    content: "Success",
+    children: "Success",
     color: "success"
   },
   {
-    content: "Danger",
+    children: "Danger",
     color: "danger"
   },
   {
-    content: "Warning",
+    children: "Warning",
     color: "warning"
   },
   {
-    content: "Info",
+    children: "Info",
     color: "info"
   }
 ];
 
 export const dropdownActions = [
   {
-    content: `Action 1`,
+    children: `Action 1`,
     url: `#`
   },
   {
-    content: `Action 2`,
+    children: `Action 2`,
     url: `#`
   },
   {
-    content: `Action 3`,
+    children: `Action 3`,
     url: `#`
   },
   {
-    content: `Action 4`,
+    children: `Action 4`,
     url: `#`
   }
 ];

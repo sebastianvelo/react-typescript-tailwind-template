@@ -8,7 +8,7 @@ const loadingSection: ComponentSectionProps = {
     {
       children: (
         <Row>
-          <Loading isLoading={true} content={`Some info text...`} />
+          <Loading isLoading={true} children={`Some info text...`} />
         </Row>
       )
     }

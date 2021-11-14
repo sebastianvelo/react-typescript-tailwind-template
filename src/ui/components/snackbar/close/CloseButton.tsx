@@ -10,7 +10,7 @@ const CloseButton: FunctionComponent<CloseButtonProps> = (
   props: CloseButtonProps
 ) => (
   <Action
-    content="x"
+    children="x"
     color={props.color}
     onClick={props.onClose}
     className="absolute right-32 "

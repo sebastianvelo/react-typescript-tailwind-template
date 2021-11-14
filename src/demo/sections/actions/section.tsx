@@ -9,7 +9,7 @@ const actionsSection: ComponentSectionProps = {
   title: "Actions",
   articles: [
     {
-      title: { content: "Buttons loud" },
+      title: { children: "Buttons loud" },
       children: (
         <>
           {(["s", "m", "l"] as Size[]).map((size: Size) => (
@@ -23,7 +23,7 @@ const actionsSection: ComponentSectionProps = {
       )
     },
     {
-      title: { content: "Buttons quiet" },
+      title: { children: "Buttons quiet" },
       children: (
         <>
           {(["s", "m", "l"] as Size[]).map((size: Size) => (
@@ -37,7 +37,7 @@ const actionsSection: ComponentSectionProps = {
       )
     },
     {
-      title: { content: "Dropdown loud" },
+      title: { children: "Dropdown loud" },
       children: (
         <>
           {(["s", "m", "l"] as Size[]).map((size: Size) => (
@@ -55,7 +55,7 @@ const actionsSection: ComponentSectionProps = {
       )
     },
     {
-      title: { content: "Dropdown quiet" },
+      title: { children: "Dropdown quiet" },
       children: (
         <>
           {(["s", "m", "l"] as Size[]).map((size: Size) => (
@@ -74,7 +74,7 @@ const actionsSection: ComponentSectionProps = {
       )
     },
     {
-      title: { content: "Anchors & Links" },
+      title: { children: "Anchors & Links" },
       children: (
         <Row className="md:space-x-2">
           {actions.map((action) => (

@@ -7,7 +7,9 @@ interface StoryListProps {
   hoverable?: boolean;
 }
 
-const StoryList: FunctionComponent<StoryListProps> = (props: StoryListProps) => (
+const StoryList: FunctionComponent<StoryListProps> = (
+  props: StoryListProps
+) => (
   <div className={`divide-y ${divideColorStyle({})} w-full`}>
     {props.stories?.map((story) => (
       <Story {...story} {...props} />
