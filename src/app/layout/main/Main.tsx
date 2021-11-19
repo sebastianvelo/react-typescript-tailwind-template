@@ -22,7 +22,7 @@ const Main: FunctionComponent<MainProps> = (props: MainProps) => {
       <Switch>
         {props.pages?.map((page: Page) => (
           <Route key={page.route} exact path={page.route}>
-            {getComponent(page.uiType, page.data, page.children)}
+            {getComponent(page)}
           </Route>
         ))}
       </Switch>

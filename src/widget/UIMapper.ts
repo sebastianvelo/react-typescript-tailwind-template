@@ -59,21 +59,19 @@ UIMapper.set("main", Main);
 UIMapper.set("footer", Footer);
 UIMapper.set("layout", Layout);
 
-const getComponent = (
-  uiType: string = "error",
-  props: any,
-  children?: Widget[]
-): React.ReactNode => {
-  const Component = UIMapper.get(uiType);
-  const childrenComponent = children?.map((child) =>
-    getComponent(child.uiType, child.data, child.children)
+const getComponent = (widget: Widget | string): React.ReactNode | string => {
+  if(typeof widget  === 'string') return widget;
+  
+  const Component = UIMapper.get(widget.uiType);
+  const childrenComponent = widget.children?.map((child) =>
+    getComponent(child)
   );
 
-  if (Component) return Component({ ...props, children: childrenComponent });
+  if (Component) return Component({ ...widget.data, children: childrenComponent });
   return React.createElement(
     "p",
     null,
-    `Component with uiType ${uiType} does not exist.`
+    `Component with uiType ${widget.uiType} does not exist.`
   );
 };
 export default getComponent;
