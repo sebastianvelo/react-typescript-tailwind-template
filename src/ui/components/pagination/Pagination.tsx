@@ -24,7 +24,7 @@ const Pagination: FunctionComponent<PaginationProps> = (
       .map((i) =>
         active < half // Active is less than half of quantityToShow
           ? i // Then return the number
-          : active > props.total - half // Active is greater than the total pages - half of quantityToShow
+          : active > props.total - half + 1// Active is greater than the total pages - half of quantityToShow
           ? i + (props.total - props.pagesToShow) // Then return the number + the difference between size and quantity to show
           : i + (active - half)
       );
@@ -47,6 +47,7 @@ const Pagination: FunctionComponent<PaginationProps> = (
           color: props.color,
           quiet: page !== active,
           onClick: () => handleClick(page),
+          type: 'button',
           className: `w-14`
         }))}
       />
