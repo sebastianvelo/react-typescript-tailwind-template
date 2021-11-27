@@ -9,4 +9,8 @@
   .list-none::-webkit-details-marker {
     display: none;
   }
+  body {
+    font-family: "Proxima Nova", -apple-system, "Helvetica Neue", Helvetica,
+      "Roboto", Arial, sans-serif;
+  }
 }
